@@ -1,7 +1,7 @@
 ---
 name: ISSUE_TEMPLATE
-about: 기능 구현 관련 이슈를 작성합니다.
-title: "[페이지] 기능 구현 관련 이슈"
+about: 서비스 구현 관련 이슈를 작성합니다.
+title: "ex) [Feat] 기능 구현 관련 이슈"
 labels: ''
 assignees: ''
 
