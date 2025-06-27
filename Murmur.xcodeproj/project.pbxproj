@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD82E0A9EB80030A623 /* HomeView.swift */; };
+		14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD92E0A9EB80030A623 /* MurmurApp.swift */; };
+		14363FDD2E0A9EB80030A623 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */; };
+		14363FDE2E0A9EB80030A623 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14363FD72E0A9EB80030A623 /* Assets.xcassets */; };
+		1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */; };
+		1488E4DC2E0AEF3F00988B12 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D32E0AEF3F00988B12 /* Pretendard-Black.otf */; };
+		1488E4DD2E0AEF3F00988B12 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D72E0AEF3F00988B12 /* Pretendard-Light.otf */; };
+		1488E4DE2E0AEF3F00988B12 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D42E0AEF3F00988B12 /* Pretendard-Bold.otf */; };
+		1488E4DF2E0AEF3F00988B12 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4DB2E0AEF3F00988B12 /* Pretendard-Thin.otf */; };
+		1488E4E02E0AEF3F00988B12 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D92E0AEF3F00988B12 /* Pretendard-Regular.otf */; };
+		1488E4E12E0AEF3F00988B12 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D62E0AEF3F00988B12 /* Pretendard-ExtraLight.otf */; };
+		1488E4E22E0AEF3F00988B12 /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D52E0AEF3F00988B12 /* Pretendard-ExtraBold.otf */; };
+		1488E4E32E0AEF3F00988B12 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D82E0AEF3F00988B12 /* Pretendard-Medium.otf */; };
+		1488E4E42E0AEF3F00988B12 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4DA2E0AEF3F00988B12 /* Pretendard-SemiBold.otf */; };
+		1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4E62E0AF14C00988B12 /* Font+Extensions.swift */; };
+		1488E4EE2E0AF4D200988B12 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */; };
+		1488E4F02E0AF9A600988B12 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4EF2E0AF9A200988B12 /* Temp.swift */; };
+		1488E4F22E0AF9AC00988B12 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F12E0AF9AB00988B12 /* Temp.swift */; };
+		1488E4F42E0AF9B100988B12 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F32E0AF9B000988B12 /* Temp.swift */; };
+		1488E4F62E0AF9BA00988B12 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F52E0AF9B900988B12 /* Temp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14363FC42E0A98B10030A623 /* Murmur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Murmur.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		14363FD72E0A9EB80030A623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14363FD82E0A9EB80030A623 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		14363FD92E0A9EB80030A623 /* MurmurApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmurApp.swift; sourceTree = "<group>"; };
+		1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		1488E4D32E0AEF3F00988B12 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		1488E4D42E0AEF3F00988B12 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		1488E4D52E0AEF3F00988B12 /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		1488E4D62E0AEF3F00988B12 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		1488E4D72E0AEF3F00988B12 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		1488E4D82E0AEF3F00988B12 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		1488E4D92E0AEF3F00988B12 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		1488E4DA2E0AEF3F00988B12 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		1488E4DB2E0AEF3F00988B12 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		1488E4E52E0AEFA400988B12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1488E4E62E0AF14C00988B12 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1488E4EF2E0AF9A200988B12 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		1488E4F12E0AF9AB00988B12 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		1488E4F32E0AF9B000988B12 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		1488E4F52E0AF9B900988B12 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14363FC12E0A98B10030A623 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14363FBB2E0A98B10030A623 = {
+			isa = PBXGroup;
+			children = (
+				14363FDA2E0A9EB80030A623 /* Murmur */,
+				14363FC52E0A98B10030A623 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14363FC52E0A98B10030A623 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14363FC42E0A98B10030A623 /* Murmur.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14363FD62E0A9EB80030A623 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		14363FDA2E0A9EB80030A623 /* Murmur */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4E52E0AEFA400988B12 /* Info.plist */,
+				1488E4C52E0AC88A00988B12 /* Resources */,
+				1488E4CD2E0AC8D900988B12 /* Common */,
+				1488E4E82E0AF36100988B12 /* Models */,
+				1488E4E92E0AF36D00988B12 /* Features */,
+				14363FD92E0A9EB80030A623 /* MurmurApp.swift */,
+				14363FD62E0A9EB80030A623 /* Preview Content */,
+			);
+			path = Murmur;
+			sourceTree = "<group>";
+		};
+		1488E4C52E0AC88A00988B12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4CC2E0AC8D400988B12 /* Fonts */,
+				14363FD72E0A9EB80030A623 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1488E4CC2E0AC8D400988B12 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4D32E0AEF3F00988B12 /* Pretendard-Black.otf */,
+				1488E4D42E0AEF3F00988B12 /* Pretendard-Bold.otf */,
+				1488E4D52E0AEF3F00988B12 /* Pretendard-ExtraBold.otf */,
+				1488E4D62E0AEF3F00988B12 /* Pretendard-ExtraLight.otf */,
+				1488E4D72E0AEF3F00988B12 /* Pretendard-Light.otf */,
+				1488E4D82E0AEF3F00988B12 /* Pretendard-Medium.otf */,
+				1488E4D92E0AEF3F00988B12 /* Pretendard-Regular.otf */,
+				1488E4DA2E0AEF3F00988B12 /* Pretendard-SemiBold.otf */,
+				1488E4DB2E0AEF3F00988B12 /* Pretendard-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1488E4CD2E0AC8D900988B12 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4CF2E0AC9A200988B12 /* DesignSystem */,
+				1488E4CE2E0AC98F00988B12 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1488E4CE2E0AC98F00988B12 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4F52E0AF9B900988B12 /* Temp.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1488E4CF2E0AC9A200988B12 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4E62E0AF14C00988B12 /* Font+Extensions.swift */,
+				1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		1488E4E82E0AF36100988B12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4EF2E0AF9A200988B12 /* Temp.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1488E4E92E0AF36D00988B12 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4EA2E0AF38E00988B12 /* Home */,
+				1488E4EB2E0AF3ED00988B12 /* Story */,
+				1488E4EC2E0AF48600988B12 /* Radio */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		1488E4EA2E0AF38E00988B12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				14363FD82E0A9EB80030A623 /* HomeView.swift */,
+				1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1488E4EB2E0AF3ED00988B12 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4F12E0AF9AB00988B12 /* Temp.swift */,
+			);
+			path = Story;
+			sourceTree = "<group>";
+		};
+		1488E4EC2E0AF48600988B12 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				1488E4F32E0AF9B000988B12 /* Temp.swift */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14363FC32E0A98B10030A623 /* Murmur */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14363FD22E0A98B20030A623 /* Build configuration list for PBXNativeTarget "Murmur" */;
+			buildPhases = (
+				14363FC02E0A98B10030A623 /* Sources */,
+				14363FC12E0A98B10030A623 /* Frameworks */,
+				14363FC22E0A98B10030A623 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Murmur;
+			packageProductDependencies = (
+			);
+			productName = Murmur;
+			productReference = 14363FC42E0A98B10030A623 /* Murmur.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14363FBC2E0A98B10030A623 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					14363FC32E0A98B10030A623 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 14363FBF2E0A98B10030A623 /* Build configuration list for PBXProject "Murmur" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14363FBB2E0A98B10030A623;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 14363FC52E0A98B10030A623 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14363FC32E0A98B10030A623 /* Murmur */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14363FC22E0A98B10030A623 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1488E4DC2E0AEF3F00988B12 /* Pretendard-Black.otf in Resources */,
+				1488E4DD2E0AEF3F00988B12 /* Pretendard-Light.otf in Resources */,
+				1488E4DE2E0AEF3F00988B12 /* Pretendard-Bold.otf in Resources */,
+				1488E4DF2E0AEF3F00988B12 /* Pretendard-Thin.otf in Resources */,
+				1488E4E02E0AEF3F00988B12 /* Pretendard-Regular.otf in Resources */,
+				1488E4E12E0AEF3F00988B12 /* Pretendard-ExtraLight.otf in Resources */,
+				1488E4E22E0AEF3F00988B12 /* Pretendard-ExtraBold.otf in Resources */,
+				1488E4E32E0AEF3F00988B12 /* Pretendard-Medium.otf in Resources */,
+				1488E4E42E0AEF3F00988B12 /* Pretendard-SemiBold.otf in Resources */,
+				14363FDD2E0A9EB80030A623 /* Preview Assets.xcassets in Resources */,
+				14363FDE2E0A9EB80030A623 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14363FC02E0A98B10030A623 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1488E4F22E0AF9AC00988B12 /* Temp.swift in Sources */,
+				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
+				1488E4F62E0AF9BA00988B12 /* Temp.swift in Sources */,
+				14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */,
+				1488E4F42E0AF9B100988B12 /* Temp.swift in Sources */,
+				1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */,
+				1488E4EE2E0AF4D200988B12 /* HomeViewModel.swift in Sources */,
+				1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */,
+				1488E4F02E0AF9A600988B12 /* Temp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		14363FD02E0A98B20030A623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14363FD12E0A98B20030A623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14363FD32E0A98B20030A623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Murmur/Preview Content\"";
+				DEVELOPMENT_TEAM = 4FCV7BL65G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Murmur/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Murmur;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ada.Murmur;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14363FD42E0A98B20030A623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Murmur/Preview Content\"";
+				DEVELOPMENT_TEAM = 4FCV7BL65G;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Murmur/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Murmur;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ada.Murmur;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14363FBF2E0A98B10030A623 /* Build configuration list for PBXProject "Murmur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14363FD02E0A98B20030A623 /* Debug */,
+				14363FD12E0A98B20030A623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14363FD22E0A98B20030A623 /* Build configuration list for PBXNativeTarget "Murmur" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14363FD32E0A98B20030A623 /* Debug */,
+				14363FD42E0A98B20030A623 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14363FBC2E0A98B10030A623 /* Project object */;
+}
