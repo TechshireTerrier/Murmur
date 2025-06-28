@@ -15,16 +15,7 @@ struct HomeView: View {
             Color.Gray900
                 .ignoresSafeArea()
             VStack {
-                RoundedRectangle(cornerRadius: 0)
-                    .fill(Color.gray800)
-                    .frame(width: 300, height: 100)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 0)
-                            .strokeBorder(Color.gray50, lineWidth: 10)
-                    )
-                    .overlay(
-                        OnAirTextView(isOn: homeViewModel.haveTodayStory)
-                    )
+                OnAirSignView(isOn: homeViewModel.haveTodayStory)
                     .padding(.bottom, 125)
 
                 MurmurButton(
@@ -49,7 +40,24 @@ struct HomeView: View {
     }
 }
 
-struct OnAirTextView: View {
+struct OnAirSignView: View {
+    let isOn: Bool
+
+    var body: some View {
+        RoundedRectangle(cornerRadius: 0)
+            .fill(Color.gray800)
+            .frame(width: 300, height: 100)
+            .overlay(
+                RoundedRectangle(cornerRadius: 0)
+                    .strokeBorder(Color.gray50, lineWidth: 10)
+            )
+            .overlay(
+                OnAirText(isOn: isOn)
+            )
+    }
+}
+
+struct OnAirText: View {
     let isOn: Bool
 
     var body: some View {
