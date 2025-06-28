@@ -29,6 +29,7 @@
 		1488E4F62E0AF9BA00988B12 /* ExtensionsTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F52E0AF9B900988B12 /* ExtensionsTemp.swift */; };
 		AAA5963A2E0EE64F00923793 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596392E0EE64F00923793 /* WriteView.swift */; };
 		AAA5963C2E0F09D800923793 /* FailAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5963B2E0F09D800923793 /* FailAlertView.swift */; };
+		AAA596452E10588300923793 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596442E10588300923793 /* WriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +57,16 @@
 		1488E4F52E0AF9B900988B12 /* ExtensionsTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTemp.swift; sourceTree = "<group>"; };
 		AAA596392E0EE64F00923793 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		AAA5963B2E0F09D800923793 /* FailAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAlertView.swift; sourceTree = "<group>"; };
+		AAA596442E10588300923793 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AAA5963E2E1055E000923793 /* Components */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		14363FC12E0A98B10030A623 /* Frameworks */ = {
@@ -96,6 +106,7 @@
 		14363FDA2E0A9EB80030A623 /* Murmur */ = {
 			isa = PBXGroup;
 			children = (
+				AAA5963E2E1055E000923793 /* Components */,
 				1488E4E52E0AEFA400988B12 /* Info.plist */,
 				1488E4C52E0AC88A00988B12 /* Resources */,
 				1488E4CD2E0AC8D900988B12 /* Common */,
@@ -182,6 +193,7 @@
 				14363FD82E0A9EB80030A623 /* HomeView.swift */,
 				1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */,
 				AAA596392E0EE64F00923793 /* WriteView.swift */,
+				AAA596442E10588300923793 /* WriteViewModel.swift */,
 				AAA5963B2E0F09D800923793 /* FailAlertView.swift */,
 			);
 			path = Home;
@@ -217,6 +229,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AAA5963E2E1055E000923793 /* Components */,
 			);
 			name = Murmur;
 			packageProductDependencies = (
@@ -289,6 +304,7 @@
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
 				AAA5963A2E0EE64F00923793 /* WriteView.swift in Sources */,
 				1488E4F62E0AF9BA00988B12 /* ExtensionsTemp.swift in Sources */,
+				AAA596452E10588300923793 /* WriteViewModel.swift in Sources */,
 				14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */,
 				1488E4F42E0AF9B100988B12 /* RadioTemp.swift in Sources */,
 				1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */,
