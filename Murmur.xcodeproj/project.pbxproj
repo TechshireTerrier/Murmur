@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06EFFD9F2E0FCC27000F1612 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFD9E2E0FCC27000F1612 /* SongView.swift */; };
+		06EFFDA12E0FCEB0000F1612 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA02E0FCEB0000F1612 /* ButtonView.swift */; };
+		06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */; };
 		14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD82E0A9EB80030A623 /* HomeView.swift */; };
 		14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD92E0A9EB80030A623 /* MurmurApp.swift */; };
 		14363FDD2E0A9EB80030A623 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */; };
@@ -23,13 +26,15 @@
 		1488E4E42E0AEF3F00988B12 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4DA2E0AEF3F00988B12 /* Pretendard-SemiBold.otf */; };
 		1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4E62E0AF14C00988B12 /* Font+Extensions.swift */; };
 		1488E4EE2E0AF4D200988B12 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */; };
-		1488E4F02E0AF9A600988B12 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4EF2E0AF9A200988B12 /* Temp.swift */; };
-		1488E4F22E0AF9AC00988B12 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F12E0AF9AB00988B12 /* Temp.swift */; };
+		1488E4F02E0AF9A600988B12 /* Tem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4EF2E0AF9A200988B12 /* Tem.swift */; };
 		1488E4F42E0AF9B100988B12 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F32E0AF9B000988B12 /* Temp.swift */; };
-		1488E4F62E0AF9BA00988B12 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F52E0AF9B900988B12 /* Temp.swift */; };
+		1488E4F62E0AF9BA00988B12 /* Temporary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4F52E0AF9B900988B12 /* Temporary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06EFFD9E2E0FCC27000F1612 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		06EFFDA02E0FCEB0000F1612 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
 		14363FC42E0A98B10030A623 /* Murmur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Murmur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14363FD72E0A9EB80030A623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,10 +53,9 @@
 		1488E4E52E0AEFA400988B12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1488E4E62E0AF14C00988B12 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 		1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		1488E4EF2E0AF9A200988B12 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
-		1488E4F12E0AF9AB00988B12 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		1488E4EF2E0AF9A200988B12 /* Tem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tem.swift; sourceTree = "<group>"; };
 		1488E4F32E0AF9B000988B12 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
-		1488E4F52E0AF9B900988B12 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		1488E4F52E0AF9B900988B12 /* Temporary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temporary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +144,7 @@
 		1488E4CE2E0AC98F00988B12 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1488E4F52E0AF9B900988B12 /* Temp.swift */,
+				1488E4F52E0AF9B900988B12 /* Temporary.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,7 +161,7 @@
 		1488E4E82E0AF36100988B12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1488E4EF2E0AF9A200988B12 /* Temp.swift */,
+				1488E4EF2E0AF9A200988B12 /* Tem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,7 +188,9 @@
 		1488E4EB2E0AF3ED00988B12 /* Story */ = {
 			isa = PBXGroup;
 			children = (
-				1488E4F12E0AF9AB00988B12 /* Temp.swift */,
+				06EFFD9E2E0FCC27000F1612 /* SongView.swift */,
+				06EFFDA02E0FCEB0000F1612 /* ButtonView.swift */,
+				06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -279,15 +285,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1488E4F22E0AF9AC00988B12 /* Temp.swift in Sources */,
+				06EFFD9F2E0FCC27000F1612 /* SongView.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
-				1488E4F62E0AF9BA00988B12 /* Temp.swift in Sources */,
+				06EFFDA12E0FCEB0000F1612 /* ButtonView.swift in Sources */,
+				06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */,
+				1488E4F62E0AF9BA00988B12 /* Temporary.swift in Sources */,
 				14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */,
 				1488E4F42E0AF9B100988B12 /* Temp.swift in Sources */,
 				1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */,
 				1488E4EE2E0AF4D200988B12 /* HomeViewModel.swift in Sources */,
 				1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */,
-				1488E4F02E0AF9A600988B12 /* Temp.swift in Sources */,
+				1488E4F02E0AF9A600988B12 /* Tem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
