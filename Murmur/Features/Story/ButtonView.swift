@@ -9,11 +9,16 @@ import SwiftUI
 
 struct ButtonView: View {
     var body: some View {
-        Button {
-            print("눌렸다!")
-        } label: {
-            Text("수정하기")
-                .modifier(LongButtonModifier(buttonColor: Color.keyMint))
+        VStack {
+            Button {
+                print("눌렸다!")
+            } label: {
+                Text("수정하기")
+                    .modifier(LongButtonModifier(buttonColor: Color.keyMint))
+            }
+            
+            Text("기쁨")
+                .modifier(EmotionLabelModifier())
         }
     }
 }
