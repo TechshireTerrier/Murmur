@@ -27,7 +27,9 @@ struct HomeView: View {
                 .padding(.bottom, 12)
 
                 MurmurButton(
-                    action: { print("📖 사연 보기") },
+                    action: {
+                        print("📖 사연 보기")
+                    },
                     text: "사연 보기",
                     textColor: .text07,
                     bgColor: .PointPurple
