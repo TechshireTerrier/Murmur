@@ -28,4 +28,6 @@ extension Font {
 
     static let PretendardSubheadline = Font.custom("Pretendard-Regular", size: 15, relativeTo: .subheadline)
     static let PretendardSubheadlineBold = Font.custom("Pretendard-Bold", size: 15, relativeTo: .subheadline)
+    
+    static let PretendardOnAir = Font.custom("Pretendard-Bold", size: 74)
 }
