@@ -32,8 +32,16 @@ struct TotalStoryListView: View {
                 // 사연 목록 데이터 유무에 따라 분기 처리
                 if viewModel.stories.isEmpty {
                     Spacer()
-                    Text("아직 등록된 사연이 없어요.")
-                        .foregroundStyle(.gray)
+                    Text("아직 작성된 사연이 없어요.")
+                        .font(.PretendardTitle3Bold)
+                        .foregroundStyle(.gray500)
+                        .padding(.bottom, 8)
+                    VStack {
+                        Text("오늘 머르머르하셨나요?")
+                        Text("사연을 신청해보세요!")
+                    }
+                    .font(.PretendardBody)
+                    .foregroundStyle(.gray500)
                     Spacer()
                 } else {
                     ScrollView {
