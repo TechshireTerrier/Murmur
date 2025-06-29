@@ -11,6 +11,7 @@ struct SongView: View {
     var body: some View {
         ScrollView {
             SongStoryView()
+            DailyEmotionView()
         }
     }
 }

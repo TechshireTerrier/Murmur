@@ -12,6 +12,7 @@
 		06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */; };
 		06EFFDA92E0FD854000F1612 /* EmotionLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */; };
 		06EFFDAB2E0FDB37000F1612 /* SongStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */; };
+		06EFFDAD2E10FA3F000F1612 /* DailyEmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */; };
 		14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD82E0A9EB80030A623 /* HomeView.swift */; };
 		14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD92E0A9EB80030A623 /* MurmurApp.swift */; };
 		14363FDD2E0A9EB80030A623 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
 		06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLabelModifier.swift; sourceTree = "<group>"; };
 		06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStoryView.swift; sourceTree = "<group>"; };
+		06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEmotionView.swift; sourceTree = "<group>"; };
 		14363FC42E0A98B10030A623 /* Murmur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Murmur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14363FD72E0A9EB80030A623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				06EFFD9E2E0FCC27000F1612 /* SongView.swift */,
 				06EFFDA02E0FCEB0000F1612 /* ButtonView.swift */,
 				06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */,
+				06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */,
 				06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */,
 				06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */,
 			);
@@ -297,6 +300,7 @@
 				06EFFDA12E0FCEB0000F1612 /* ButtonView.swift in Sources */,
 				06EFFDA92E0FD854000F1612 /* EmotionLabelModifier.swift in Sources */,
 				06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */,
+				06EFFDAD2E10FA3F000F1612 /* DailyEmotionView.swift in Sources */,
 				1488E4F62E0AF9BA00988B12 /* Temporary.swift in Sources */,
 				14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */,
 				1488E4F42E0AF9B100988B12 /* Temp.swift in Sources */,
