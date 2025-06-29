@@ -12,6 +12,7 @@ struct SongView: View {
         ScrollView {
             SongStoryView()
             DailyEmotionView()
+            StoryMusicView()
         }
     }
 }

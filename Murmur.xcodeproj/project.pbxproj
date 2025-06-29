@@ -13,6 +13,7 @@
 		06EFFDA92E0FD854000F1612 /* EmotionLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */; };
 		06EFFDAB2E0FDB37000F1612 /* SongStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */; };
 		06EFFDAD2E10FA3F000F1612 /* DailyEmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */; };
+		06EFFDAF2E111627000F1612 /* StoryMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAE2E111627000F1612 /* StoryMusicView.swift */; };
 		14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD82E0A9EB80030A623 /* HomeView.swift */; };
 		14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD92E0A9EB80030A623 /* MurmurApp.swift */; };
 		14363FDD2E0A9EB80030A623 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLabelModifier.swift; sourceTree = "<group>"; };
 		06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStoryView.swift; sourceTree = "<group>"; };
 		06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEmotionView.swift; sourceTree = "<group>"; };
+		06EFFDAE2E111627000F1612 /* StoryMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMusicView.swift; sourceTree = "<group>"; };
 		14363FC42E0A98B10030A623 /* Murmur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Murmur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14363FD72E0A9EB80030A623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				06EFFD9E2E0FCC27000F1612 /* SongView.swift */,
+				06EFFDAE2E111627000F1612 /* StoryMusicView.swift */,
 				06EFFDA02E0FCEB0000F1612 /* ButtonView.swift */,
 				06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */,
 				06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */,
@@ -307,6 +310,7 @@
 				1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */,
 				1488E4EE2E0AF4D200988B12 /* HomeViewModel.swift in Sources */,
 				1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */,
+				06EFFDAF2E111627000F1612 /* StoryMusicView.swift in Sources */,
 				1488E4F02E0AF9A600988B12 /* Tem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
