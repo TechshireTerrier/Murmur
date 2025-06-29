@@ -33,6 +33,7 @@
 		14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */; };
 		14EBA6022E0FDB8100314128 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */; };
 		14EBA60B2E0FEB1100314128 /* MarqueeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */; };
+		D1B9A9A72E11290800B7BAA0 /* UserStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9A9A62E11290800B7BAA0 /* UserStory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +65,21 @@
 		14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListCard.swift; sourceTree = "<group>"; };
 		14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeText.swift; sourceTree = "<group>"; };
+		D1B9A9A62E11290800B7BAA0 /* UserStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D1B9A9A02E11289700B7BAA0 /* Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D1B9A9A22E1128B100B7BAA0 /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		14363FC12E0A98B10030A623 /* Frameworks */ = {
@@ -170,6 +185,7 @@
 		1488E4E82E0AF36100988B12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D1B9A9A62E11290800B7BAA0 /* UserStory.swift */,
 				14EBA5FC2E0FCB3400314128 /* Song.swift */,
 				14EBA5FA2E0FC9ED00314128 /* Story.swift */,
 				1488E4EF2E0AF9A200988B12 /* TempModel.swift */,
@@ -209,6 +225,8 @@
 		1488E4EC2E0AF48600988B12 /* Radio */ = {
 			isa = PBXGroup;
 			children = (
+				D1B9A9A22E1128B100B7BAA0 /* Services */,
+				D1B9A9A02E11289700B7BAA0 /* Tests */,
 				1488E4F32E0AF9B000988B12 /* TempRadio.swift */,
 			);
 			path = Radio;
@@ -245,6 +263,10 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D1B9A9A02E11289700B7BAA0 /* Tests */,
+				D1B9A9A22E1128B100B7BAA0 /* Services */,
 			);
 			name = Murmur;
 			packageProductDependencies = (
@@ -317,6 +339,7 @@
 			files = (
 				14EBA5F52E0FB7E800314128 /* MurmurButton.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
+				D1B9A9A72E11290800B7BAA0 /* UserStory.swift in Sources */,
 				14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */,
 				14EBA5F72E0FC3F200314128 /* TotalStoryListView.swift in Sources */,
 				14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */,
