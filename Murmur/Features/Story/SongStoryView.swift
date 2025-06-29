@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct SongStoryView: View {
+    @State private var todayStory: String = "I'd run the risk of losing everything Sell all my things, become nomadic I'd run the risk, and just in case, I might Sell all my things and become the night"
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("오늘의 사연")
                 .font(.PretendardTitle1Bold)
                 .accessibilityLabel("오늘의 사연")
                 .accessibilityAddTraits(.isHeader)
+                .padding(.top, 56)
             
-            Text("I'd run the risk of losing everything Sell all my things, become nomadic I'd run the risk, and just in case, I might Sell all my things and become the night")
+            Text(todayStory)
                 .frame(width: 307)
                 .foregroundStyle(Color.gray900)
                 .padding(.vertical, 28)

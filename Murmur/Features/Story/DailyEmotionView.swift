@@ -55,6 +55,7 @@ struct DailyEmotionView: View {
                         .accessibilityAddTraits(.isStaticText)
                 }
             }
+            .frame(width: 361)
         }
     }
 }

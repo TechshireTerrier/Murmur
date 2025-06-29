@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		06EFFD9F2E0FCC27000F1612 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFD9E2E0FCC27000F1612 /* SongView.swift */; };
-		06EFFDA12E0FCEB0000F1612 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA02E0FCEB0000F1612 /* ButtonView.swift */; };
 		06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */; };
 		06EFFDA92E0FD854000F1612 /* EmotionLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */; };
 		06EFFDAB2E0FDB37000F1612 /* SongStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */; };
@@ -37,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		06EFFD9E2E0FCC27000F1612 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
-		06EFFDA02E0FCEB0000F1612 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
 		06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLabelModifier.swift; sourceTree = "<group>"; };
 		06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStoryView.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 			children = (
 				06EFFD9E2E0FCC27000F1612 /* SongView.swift */,
 				06EFFDAE2E111627000F1612 /* StoryMusicView.swift */,
-				06EFFDA02E0FCEB0000F1612 /* ButtonView.swift */,
 				06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */,
 				06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */,
 				06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */,
@@ -300,7 +297,6 @@
 				06EFFDAB2E0FDB37000F1612 /* SongStoryView.swift in Sources */,
 				06EFFD9F2E0FCC27000F1612 /* SongView.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
-				06EFFDA12E0FCEB0000F1612 /* ButtonView.swift in Sources */,
 				06EFFDA92E0FD854000F1612 /* EmotionLabelModifier.swift in Sources */,
 				06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */,
 				06EFFDAD2E10FA3F000F1612 /* DailyEmotionView.swift in Sources */,
