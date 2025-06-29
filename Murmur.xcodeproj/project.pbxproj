@@ -33,6 +33,10 @@
 		14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */; };
 		14EBA6022E0FDB8100314128 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */; };
 		14EBA60B2E0FEB1100314128 /* MarqueeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */; };
+		AAA5964E2E118E6500923793 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5964D2E118E6500923793 /* WriteView.swift */; };
+		AAA596502E118E7A00923793 /* FailAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5964F2E118E7A00923793 /* FailAlertView.swift */; };
+		AAA596522E118EA300923793 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596512E118EA300923793 /* WriteViewModel.swift */; };
+		AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596532E1190CB00923793 /* WriteMurmurButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListCard.swift; sourceTree = "<group>"; };
 		14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeText.swift; sourceTree = "<group>"; };
+		AAA5964D2E118E6500923793 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		AAA5964F2E118E7A00923793 /* FailAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAlertView.swift; sourceTree = "<group>"; };
+		AAA596512E118EA300923793 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
+		AAA596532E1190CB00923793 /* WriteMurmurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteMurmurButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +200,9 @@
 			children = (
 				14363FD82E0A9EB80030A623 /* HomeView.swift */,
 				1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */,
+				AAA5964D2E118E6500923793 /* WriteView.swift */,
+				AAA596512E118EA300923793 /* WriteViewModel.swift */,
+				AAA5964F2E118E7A00923793 /* FailAlertView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -218,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				14EBA5F42E0FB7E800314128 /* MurmurButton.swift */,
+				AAA596532E1190CB00923793 /* WriteMurmurButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -315,7 +327,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA596522E118EA300923793 /* WriteViewModel.swift in Sources */,
+				AAA596502E118E7A00923793 /* FailAlertView.swift in Sources */,
+				AAA5964E2E118E6500923793 /* WriteView.swift in Sources */,
 				14EBA5F52E0FB7E800314128 /* MurmurButton.swift in Sources */,
+				AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
 				14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */,
 				14EBA5F72E0FC3F200314128 /* TotalStoryListView.swift in Sources */,
