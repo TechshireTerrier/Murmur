@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06EFFD9F2E0FCC27000F1612 /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFD9E2E0FCC27000F1612 /* SongView.swift */; };
+		06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */; };
+		06EFFDA92E0FD854000F1612 /* EmotionLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */; };
+		06EFFDAB2E0FDB37000F1612 /* SongStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */; };
+		06EFFDAD2E10FA3F000F1612 /* DailyEmotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */; };
+		06EFFDAF2E111627000F1612 /* StoryMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDAE2E111627000F1612 /* StoryMusicView.swift */; };
 		14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD82E0A9EB80030A623 /* HomeView.swift */; };
 		14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14363FD92E0A9EB80030A623 /* MurmurApp.swift */; };
 		14363FDD2E0A9EB80030A623 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */; };
@@ -40,6 +46,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06EFFD9E2E0FCC27000F1612 /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
+		06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLabelModifier.swift; sourceTree = "<group>"; };
+		06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStoryView.swift; sourceTree = "<group>"; };
+		06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEmotionView.swift; sourceTree = "<group>"; };
+		06EFFDAE2E111627000F1612 /* StoryMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryMusicView.swift; sourceTree = "<group>"; };
 		14363FC42E0A98B10030A623 /* Murmur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Murmur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14363FD52E0A9EB80030A623 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14363FD72E0A9EB80030A623 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -210,6 +222,12 @@
 		1488E4EB2E0AF3ED00988B12 /* Story */ = {
 			isa = PBXGroup;
 			children = (
+				06EFFD9E2E0FCC27000F1612 /* SongView.swift */,
+				06EFFDAE2E111627000F1612 /* StoryMusicView.swift */,
+				06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */,
+				06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */,
+				06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */,
+				06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */,
 				14EBA5FE2E0FD85E00314128 /* Components */,
 				14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */,
 				14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */,
@@ -330,6 +348,12 @@
 				AAA596522E118EA300923793 /* WriteViewModel.swift in Sources */,
 				AAA596502E118E7A00923793 /* FailAlertView.swift in Sources */,
 				AAA5964E2E118E6500923793 /* WriteView.swift in Sources */,
+				06EFFDAB2E0FDB37000F1612 /* SongStoryView.swift in Sources */,
+				06EFFD9F2E0FCC27000F1612 /* SongView.swift in Sources */,
+				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
+				06EFFDA92E0FD854000F1612 /* EmotionLabelModifier.swift in Sources */,
+				06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */,
+				06EFFDAD2E10FA3F000F1612 /* DailyEmotionView.swift in Sources */,
 				14EBA5F52E0FB7E800314128 /* MurmurButton.swift in Sources */,
 				AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
@@ -343,6 +367,7 @@
 				1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */,
 				1488E4EE2E0AF4D200988B12 /* HomeViewModel.swift in Sources */,
 				1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */,
+				06EFFDAF2E111627000F1612 /* StoryMusicView.swift in Sources */,
 				1488E4F02E0AF9A600988B12 /* TempModel.swift in Sources */,
 				14EBA5FD2E0FCB3500314128 /* Song.swift in Sources */,
 				14EBA5FB2E0FC9F200314128 /* Story.swift in Sources */,
