@@ -9,10 +9,18 @@ import SwiftUI
 
 @main
 struct MurmurApp: App {
+    @StateObject private var navigationManager = NavigationManager()
+
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .preferredColorScheme(.dark)
+            NavigationStack(path: $navigationManager.path) {
+                HomeView()
+                    .navigationDestination(for: DestinationType.self) { destination in
+                        ViewRouter(for: destination)
+                    }
+            }
+            .preferredColorScheme(.dark)
+            .environmentObject(navigationManager)
         }
     }
 }
