@@ -9,7 +9,8 @@ import SwiftUI
 
 struct WriteView: View {
     @StateObject private var viewModel = WriteViewModel()
-    
+    @EnvironmentObject private var navigationManager: NavigationManager
+
     var body: some View {
         ZStack {
             VStack(alignment: .leading, spacing: 24) {
@@ -22,7 +23,7 @@ struct WriteView: View {
                     Spacer()
                 }
                 .padding(.leading, 33.5)
-                
+
                 ZStack(alignment: .topLeading) {
                     if viewModel.userText.isEmpty {
                         Text("오늘 어떤 일이 있었나요?\n하루를 떠올리며 입력해보세요")
@@ -36,7 +37,7 @@ struct WriteView: View {
                 .background(Color.Gray50)
                 .cornerRadius(16)
                 .padding(.horizontal, 20)
-                
+
                 HStack(spacing: 12) {
                     WriteMurmurButton(
                         title: "작성 완료",
@@ -51,7 +52,7 @@ struct WriteView: View {
                             // 사연 작성 완료 처리
                         }
                     }
-                    
+
                     WriteMurmurButton(
                         title: "음성으로 기록하기",
                         font: .PretendardBodySemiBold,
@@ -63,15 +64,23 @@ struct WriteView: View {
                     }
                 }
                 .padding(.horizontal, 20)
-                
+
                 Spacer()
             }
             .padding(.top, 60)
-            
+
             FailAlertView(isPresented: $viewModel.showFailAlert)
+        }
+        .navigationBarBackButtonHidden()
+        .enableSwipeBack()
+        .toolbar {
+            CustomBackButton {
+                navigationManager.pop()
+            }
         }
     }
 }
+
 #Preview {
     WriteView()
         .preferredColorScheme(.dark)

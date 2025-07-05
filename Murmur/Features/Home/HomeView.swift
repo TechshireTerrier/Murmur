@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var homeViewModel = HomeViewModel()
+    @EnvironmentObject private var navigationManager: NavigationManager
 
     var body: some View {
         ZStack {
@@ -19,7 +20,10 @@ struct HomeView: View {
                     .padding(.bottom, 125)
 
                 MurmurButton(
-                    action: { print("📝 사연 신청하기") },
+                    action: {
+                        print("📝 사연 신청하기")
+                        navigationManager.push(to: .writeStory)
+                    },
                     text: "사연 신청하기",
                     textColor: .text07,
                     bgColor: .keyMint
@@ -29,6 +33,7 @@ struct HomeView: View {
                 MurmurButton(
                     action: {
                         print("📖 사연 보기")
+                        navigationManager.push(to: .totalStoryList)
                     },
                     text: "사연 보기",
                     textColor: .text07,
@@ -77,4 +82,5 @@ struct OnAirText: View {
 
 #Preview {
     HomeView()
+        .environmentObject(NavigationManager())
 }
