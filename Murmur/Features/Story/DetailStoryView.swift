@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SongView: View {
+struct DetailStoryView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -20,5 +20,5 @@ struct SongView: View {
 }
 
 #Preview {
-    SongView()
+    DetailStoryView()
 }

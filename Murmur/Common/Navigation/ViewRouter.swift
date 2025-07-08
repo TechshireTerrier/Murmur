@@ -23,7 +23,7 @@ func ViewRouter(for destination: DestinationType) -> some View {
     case .totalStoryList:
         TotalStoryListView()
     case .detailStory:
-        SongView()
+        DetailStoryView()
     case .modifyStory:
         // TODO: - 사연 수정 뷰 구현
         EmptyView()
