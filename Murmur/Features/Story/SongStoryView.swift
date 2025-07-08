@@ -12,11 +12,21 @@ struct SongStoryView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("오늘의 사연")
-                .font(.PretendardTitle1Bold)
-                .accessibilityLabel("오늘의 사연")
-                .accessibilityAddTraits(.isHeader)
-                .padding(.top, 56)
+            HStack {
+                Text("오늘의 사연")
+                    .font(.PretendardTitle1Bold)
+                    .accessibilityLabel("오늘의 사연")
+                    .accessibilityAddTraits(.isHeader)
+                    .padding(.top, 56)
+                
+                Button("수정하기") {
+                    print("수정하기 버튼 눌림")
+                }
+                .font(.PretendardBody)
+                .foregroundStyle(Color.text04)
+                .accessibilityLabel("수정하기")
+                .accessibilityAddTraits(.isButton)
+            }
             
             Text(todayStory)
                 .frame(width: 307)
@@ -27,15 +37,6 @@ struct SongStoryView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .accessibilityLabel("사연 내용")
                 .accessibilityAddTraits(.isStaticText)
-            
-            Button {
-                print("수정하기 버튼 눌림")
-            } label: {
-                Text("수정하기")
-                    .modifier(LongButtonModifier(buttonColor: Color.keyMint))
-            }
-            .accessibilityLabel("수정하기")
-            .accessibilityAddTraits(.isButton)
         }
     }
 }
