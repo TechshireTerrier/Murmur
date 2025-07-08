@@ -278,8 +278,6 @@
 				06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */,
 				06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */,
 				06EFFDAE2E111627000F1612 /* StoryMusicView.swift */,
-				06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */,
-				06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */,
 				14EBA5FE2E0FD85E00314128 /* Components */,
 				14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */,
 				14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */,
@@ -309,6 +307,8 @@
 		14EBA5FE2E0FD85E00314128 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */,
+				06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */,
 				14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */,
 				14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */,
 			);
