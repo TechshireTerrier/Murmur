@@ -18,6 +18,7 @@ extension Font {
     
     static let PretendardTitle2 = Font.custom("Pretendard-Regular", size: 22, relativeTo: .title2)
     static let PretendardTitle2Bold = Font.custom("Pretendard-Bold", size: 22, relativeTo: .title2)
+    static let PretendardTitle2SemiBold = Font.custom("Pretendard-SemiBold", size: 22, relativeTo: .title2)
     
     static let PretendardTitle3 = Font.custom("Pretendard-Regular", size: 20, relativeTo: .title3)
     static let PretendardTitle3Bold = Font.custom("Pretendard-Bold", size: 20, relativeTo: .title3)

@@ -11,7 +11,7 @@ import SwiftUI
 struct MurmurApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            WriteView()
                 .preferredColorScheme(.dark)
         }
     }
