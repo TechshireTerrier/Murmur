@@ -6,38 +6,47 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct SongStoryView: View {
     @State private var todayStory: String = "I'd run the risk of losing everything Sell all my things, become nomadic I'd run the risk, and just in case, I might Sell all my things and become the night"
+    static var screenWidth: CGFloat { UIScreen.main.bounds.width }
+    static var widthSize: CGFloat { screenWidth * 0.9 }
+    private var generalWidth = SongStoryView.widthSize
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("오늘의 사연")
-                    .font(.PretendardTitle1Bold)
-                    .accessibilityLabel("오늘의 사연")
-                    .accessibilityAddTraits(.isHeader)
-                    .padding(.top, 56)
+            VStack(alignment: .leading) {
                 
-                Button("수정하기") {
-                    print("수정하기 버튼 눌림")
+                HStack {
+                    Text("오늘의 사연")
+                        .font(.PretendardTitle1Bold)
+                        .accessibilityLabel("오늘의 사연")
+                        .accessibilityAddTraits(.isHeader)
+                    
+                    Spacer()
+                    
+                    Button("수정하기") {
+                        print("수정하기 버튼 눌림")
+                    }
+                    .font(.PretendardBody)
+                    .foregroundStyle(Color.text04)
+                    .accessibilityLabel("수정하기")
+                    .accessibilityAddTraits(.isButton)
                 }
-                .font(.PretendardBody)
-                .foregroundStyle(Color.text04)
-                .accessibilityLabel("수정하기")
-                .accessibilityAddTraits(.isButton)
+                .frame(width: generalWidth)
+                .padding(.top, SongStoryView.screenWidth * 0.1)
+
+                
+                Text(todayStory)
+                    .foregroundStyle(Color.gray900)
+                    .padding(SongStoryView.screenWidth * 0.07)
+                    .frame(width: generalWidth, height: 404, alignment: .top)
+                    .background(Color.gray50)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .accessibilityLabel("사연 내용")
+                    .accessibilityAddTraits(.isStaticText)
             }
-            
-            Text(todayStory)
-                .frame(width: 307)
-                .foregroundStyle(Color.gray900)
-                .padding(.vertical, 28)
-                .frame(width: 361, height: 404, alignment: .top)
-                .background(Color.gray50)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .accessibilityLabel("사연 내용")
-                .accessibilityAddTraits(.isStaticText)
-        }
+
     }
 }
 
