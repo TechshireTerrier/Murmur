@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TotalStoryListView: View {
     @StateObject private var viewModel = TotalStoryListViewModel()
+    @EnvironmentObject private var navigationManager: NavigationManager
 
     var body: some View {
         ZStack {
@@ -55,6 +56,13 @@ struct TotalStoryListView: View {
                 }
             }
             .padding(.horizontal, 16)
+        }
+        .navigationBarBackButtonHidden()
+        .enableSwipeBack()
+        .toolbar {
+            CustomBackButton {
+                navigationManager.pop()
+            }
         }
     }
 }

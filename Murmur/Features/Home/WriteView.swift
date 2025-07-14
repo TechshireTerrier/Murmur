@@ -10,6 +10,7 @@ struct WriteView: View {
     @State private var keyboardHeight: CGFloat = 0
     private let placeholder = "오늘 어떤 일이 있었나요?\n하루를 떠올리며 입력해보세요"
     @FocusState private var isTextEditorFocused: Bool
+    @EnvironmentObject private var navigationManager: NavigationManager
 
     var body: some View {
         ZStack {
@@ -117,6 +118,7 @@ struct WriteView: View {
         }
     }
 }
+
 #Preview {
     WriteView()
         .preferredColorScheme(.dark)
