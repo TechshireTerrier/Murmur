@@ -9,6 +9,9 @@ import SwiftUI
 import UIKit
 
 struct DailyEmotionView: View {
+    @State private var emotions = [
+        "기쁨", "벅차오름", "감동적", "뿌듯함"
+    ]
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var widthSize: CGFloat { screenWidth * 0.9 }
     private var generalWidth = SongStoryView.widthSize
@@ -22,22 +25,12 @@ struct DailyEmotionView: View {
                 .padding(.bottom, DailyEmotionView.screenWidth * 0.04)
             
             HStack {
-                Text("기쁨")
-                    .modifier(EmotionLabelModifier())
-                    .accessibilityLabel("추출된 감정")
-                    .accessibilityAddTraits(.isStaticText)
-                Text("벅차오름")
-                    .modifier(EmotionLabelModifier())
-                    .accessibilityLabel("추출된 감정")
-                    .accessibilityAddTraits(.isStaticText)
-                Text("감동적")
-                    .modifier(EmotionLabelModifier())
-                    .accessibilityLabel("추출된 감정")
-                    .accessibilityAddTraits(.isStaticText)
-                Text("뿌듯함")
-                    .modifier(EmotionLabelModifier())
-                    .accessibilityLabel("추출된 감정")
-                    .accessibilityAddTraits(.isStaticText)
+                ForEach(0..<emotions.count, id: \.self) { index in
+                    Text("\(emotions[index])")
+                        .modifier(EmotionLabelModifier())
+                        .accessibilityLabel("추출된 감정")
+                        .accessibilityAddTraits(.isStaticText)
+                }
             }
             .frame(width: generalWidth)
         }
