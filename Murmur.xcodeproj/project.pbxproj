@@ -40,6 +40,7 @@
 		14EBA6022E0FDB8100314128 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */; };
 		14EBA60B2E0FEB1100314128 /* MarqueeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */; };
 		AA5462E52E156B320061D49F /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5462E42E156B320061D49F /* RecordView.swift */; };
+		AA7E0E912E2546170037DFED /* CheckSTTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E0E902E2546170037DFED /* CheckSTTView.swift */; };
 		AAA5964E2E118E6500923793 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5964D2E118E6500923793 /* WriteView.swift */; };
 		AAA596502E118E7A00923793 /* FailAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5964F2E118E7A00923793 /* FailAlertView.swift */; };
 		AAA596522E118EA300923793 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596512E118EA300923793 /* WriteViewModel.swift */; };
@@ -82,6 +83,7 @@
 		14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeText.swift; sourceTree = "<group>"; };
 		AA5462E42E156B320061D49F /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		AA7E0E902E2546170037DFED /* CheckSTTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSTTView.swift; sourceTree = "<group>"; };
 		AAA5964D2E118E6500923793 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		AAA5964F2E118E7A00923793 /* FailAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAlertView.swift; sourceTree = "<group>"; };
 		AAA596512E118EA300923793 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				AAA596512E118EA300923793 /* WriteViewModel.swift */,
 				AAA5964F2E118E7A00923793 /* FailAlertView.swift */,
 				AA5462E42E156B320061D49F /* RecordView.swift */,
+				AA7E0E902E2546170037DFED /* CheckSTTView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
 				14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */,
+				AA7E0E912E2546170037DFED /* CheckSTTView.swift in Sources */,
 				14EBA5F72E0FC3F200314128 /* TotalStoryListView.swift in Sources */,
 				14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */,
 				1488E4F42E0AF9B100988B12 /* TempRadio.swift in Sources */,
@@ -433,6 +437,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성 입력을 위해 마이크 접근이 필요합니다.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "음성을 텍스트로 변환하기 위해 접근이 필요합니다.";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -490,6 +496,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "음성 입력을 위해 마이크 접근이 필요합니다.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "음성을 텍스트로 변환하기 위해 접근이 필요합니다.";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -517,6 +525,7 @@
 				INFOPLIST_FILE = Murmur/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Murmur;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "음성을 텍스트로 변환하기 위해 접근이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +567,7 @@
 				INFOPLIST_FILE = Murmur/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Murmur;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "음성을 텍스트로 변환하기 위해 접근이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
