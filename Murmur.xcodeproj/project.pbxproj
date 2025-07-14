@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06B93E6F2E24EBF0009AA80D /* DetailStoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B93E6E2E24EBF0009AA80D /* DetailStoryButtonView.swift */; };
 		06EFFD9F2E0FCC27000F1612 /* DetailStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFD9E2E0FCC27000F1612 /* DetailStoryView.swift */; };
 		06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */; };
 		06EFFDA92E0FD854000F1612 /* EmotionLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06B93E6E2E24EBF0009AA80D /* DetailStoryButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoryButtonView.swift; sourceTree = "<group>"; };
 		06EFFD9E2E0FCC27000F1612 /* DetailStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoryView.swift; sourceTree = "<group>"; };
 		06EFFDA22E0FD305000F1612 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
 		06EFFDA82E0FD854000F1612 /* EmotionLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLabelModifier.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				06EFFDAA2E0FDB37000F1612 /* SongStoryView.swift */,
 				06EFFDAC2E10FA3F000F1612 /* DailyEmotionView.swift */,
 				06EFFDAE2E111627000F1612 /* StoryMusicView.swift */,
+				06B93E6E2E24EBF0009AA80D /* DetailStoryButtonView.swift */,
 				14EBA5FE2E0FD85E00314128 /* Components */,
 				14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */,
 				14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */,
@@ -409,6 +412,7 @@
 				06EFFDA32E0FD305000F1612 /* LongButtonModifier.swift in Sources */,
 				145A13502E19544600FE8EDF /* NavigationManager.swift in Sources */,
 				06EFFDAD2E10FA3F000F1612 /* DailyEmotionView.swift in Sources */,
+				06B93E6F2E24EBF0009AA80D /* DetailStoryButtonView.swift in Sources */,
 				14EBA5F52E0FB7E800314128 /* MurmurButton.swift in Sources */,
 				AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,

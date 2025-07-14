@@ -10,10 +10,13 @@ import SwiftUI
 struct DetailStoryView: View {
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                SongStoryView()
-                DailyEmotionView()
-                StoryMusicView()
+            VStack {
+                VStack(spacing: 20) {
+                    SongStoryView()
+                    DailyEmotionView()
+                    StoryMusicView()
+                }
+                DetailStoryButtonView()
             }
         }
     }
