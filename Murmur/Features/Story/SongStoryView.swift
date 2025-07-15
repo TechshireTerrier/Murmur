@@ -11,6 +11,7 @@ import UIKit
 struct SongStoryView: View {
     @State private var todayStory: String = "I'd run the risk of losing everything Sell all my things, become nomadic I'd run the risk, and just in case, I might Sell all my things and become the night."
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
+    static var screenHeight: CGFloat { UIScreen.main.bounds.height }
     static var widthSize: CGFloat { screenWidth * 0.9 }
     private var generalWidth = SongStoryView.widthSize
     
@@ -44,7 +45,7 @@ struct SongStoryView: View {
                             .accessibilityLabel("사연 내용")
                             .accessibilityAddTraits(.isStaticText)
                     }
-                    .frame(width: generalWidth, height: 404, alignment: .top)
+                    .frame(width: generalWidth, height: SongStoryView.screenHeight * 0.5, alignment: .top)
                     .background(Color.gray50)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
