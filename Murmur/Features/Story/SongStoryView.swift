@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 
 struct SongStoryView: View {
-    @State private var todayStory: String = "I'd run the risk of losing everything Sell all my things, become nomadic I'd run the risk, and just in case, I might Sell all my things and become the night"
+    @State private var todayStory: String = "I'd run the risk of losing everything Sell all my things, become nomadic I'd run the risk, and just in case, I might Sell all my things and become the night."
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var widthSize: CGFloat { screenWidth * 0.9 }
     private var generalWidth = SongStoryView.widthSize
@@ -37,16 +37,17 @@ struct SongStoryView: View {
                 .padding(.top, SongStoryView.screenWidth * 0.1)
 
                 
-                Text(todayStory)
-                    .foregroundStyle(Color.gray900)
-                    .padding(SongStoryView.screenWidth * 0.07)
+                    ScrollView {
+                        Text(todayStory)
+                            .foregroundStyle(Color.gray900)
+                            .padding(SongStoryView.screenWidth * 0.07)
+                            .accessibilityLabel("사연 내용")
+                            .accessibilityAddTraits(.isStaticText)
+                    }
                     .frame(width: generalWidth, height: 404, alignment: .top)
                     .background(Color.gray50)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .accessibilityLabel("사연 내용")
-                    .accessibilityAddTraits(.isStaticText)
-            }
-
+                }
     }
 }
 
