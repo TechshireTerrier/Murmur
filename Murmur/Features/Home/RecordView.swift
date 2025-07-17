@@ -20,7 +20,7 @@ struct RecordView: View {
                         Image("Chevron_Left")
                             .resizable()
                             .frame(width: 17, height: 22)
-                            .foregroundColor(Color("text01"))
+                            .foregroundColor(Color.text01)
                     }
                     Spacer()
                 }
@@ -29,7 +29,7 @@ struct RecordView: View {
                 // 타이틀
                 Text("오늘의 사연을\n신청해보세요")
                     .font(.PretendardTitle1Bold)
-                    .foregroundColor(Color("text01"))
+                    .foregroundColor(Color.text01)
                     .kerning(0.38)
                     .padding(.top, 28)
                     .padding(.horizontal, 32)
@@ -39,7 +39,7 @@ struct RecordView: View {
                 VStack() {
                 ZStack {
                     Circle()
-                        .fill(Color("PrimaryMint400")) // 민트색
+                        .fill(Color.keyMint) // 민트색
                         .frame(width: 200, height: 200)
                     Image("Recording") // 녹음 아이콘
                         .resizable()
@@ -48,7 +48,7 @@ struct RecordView: View {
                 }
                 Text("사연을 듣는 중이에요")
                     .font(.PretendardTitle2Bold)
-                    .foregroundColor(Color("text01"))
+                    .foregroundColor(Color.text01)
             }
                 Spacer()
                 // 하단 버튼
