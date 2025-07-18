@@ -6,9 +6,6 @@ class WriteViewModel: ObservableObject {
     @Published var userText: String = ""
     @Published var showFailAlert: Bool = false
 }
-
-
-
 class AudioRecorder: NSObject, ObservableObject {
     private var audioEngine = AVAudioEngine()
     private var speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))
