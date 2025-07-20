@@ -19,3 +19,8 @@ struct UserStory: Identifiable {
 struct RadioScript {
     let fullScript: String
 }
+
+struct SubtitleSegment {
+    let text: String
+    let originalRange: NSRange
+}
