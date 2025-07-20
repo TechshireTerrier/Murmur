@@ -5,9 +5,8 @@
 //  Created by gabi on 6/28/25.
 //
 
-import Foundation
+
 import SwiftUI
-import UIKit
 
 struct LongButtonModifier: ViewModifier {
     var buttonColor: Color

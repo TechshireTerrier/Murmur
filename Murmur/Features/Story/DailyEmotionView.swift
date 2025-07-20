@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct DailyEmotionView: View {
     @State private var emotions = [
@@ -14,7 +13,6 @@ struct DailyEmotionView: View {
     ]
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var widthSize: CGFloat { screenWidth * 0.9 }
-    private var generalWidth = SongStoryView.widthSize
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,7 +30,7 @@ struct DailyEmotionView: View {
                         .accessibilityAddTraits(.isStaticText)
                 }
             }
-            .frame(width: generalWidth)
+            .frame(width: DailyEmotionView.screenWidth * 0.9)
         }
     }
 }

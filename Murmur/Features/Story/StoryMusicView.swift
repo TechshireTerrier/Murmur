@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct StoryMusicView: View {
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var widthSize: CGFloat { screenWidth * 0.9 }
-    private var generalWidth = SongStoryView.widthSize
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -47,7 +45,7 @@ struct StoryMusicView: View {
                 }
             }
             .padding(24)
-            .frame(width: generalWidth)
+            .frame(width: StoryMusicView.screenWidth * 0.9)
             .background(Color.gray50)
             .clipShape(RoundedRectangle(cornerRadius: 15))
         }

@@ -6,14 +6,11 @@
 //
 
 import SwiftUI
-import UIKit
 
 struct SongStoryView: View {
     @State private var todayStory: String = "I'd run the risk of losing everything Sell all my things, become nomadic I'd run the risk, and just in case, I might Sell all my things and become the night."
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var screenHeight: CGFloat { UIScreen.main.bounds.height }
-    static var widthSize: CGFloat { screenWidth * 0.9 }
-    private var generalWidth = SongStoryView.widthSize
     
     var body: some View {
             VStack(alignment: .leading) {
@@ -34,7 +31,7 @@ struct SongStoryView: View {
                     .accessibilityLabel("수정하기")
                     .accessibilityAddTraits(.isButton)
                 }
-                .frame(width: generalWidth)
+                .frame(width: SongStoryView.screenWidth * 0.9)
                 .padding(.top, SongStoryView.screenWidth * 0.1)
 
                 
@@ -45,7 +42,7 @@ struct SongStoryView: View {
                             .accessibilityLabel("사연 내용")
                             .accessibilityAddTraits(.isStaticText)
                     }
-                    .frame(width: generalWidth, height: SongStoryView.screenHeight * 0.5, alignment: .top)
+                    .frame(width: SongStoryView.screenWidth * 0.9, height: SongStoryView.screenHeight * 0.5, alignment: .top)
                     .background(Color.gray50)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
