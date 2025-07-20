@@ -1,9 +1,8 @@
-import SwiftUI
 import AVFoundation
 import Speech
+import SwiftUI
 
 struct WriteView: View {
-
     @StateObject private var viewModel = WriteViewModel()
     @StateObject private var audioRecorder = AudioRecorder()
     @State private var userInput: String = ""
@@ -22,17 +21,6 @@ struct WriteView: View {
                 }
 
             VStack(alignment: .leading, spacing: 24) {
-                // 상단 뒤로가기 버튼
-                Button(action: {
-                    // 뒤로 가기 동작 처리
-                }) {
-                    Image("Chevron_Left")
-                        .resizable()
-                        .frame(width: 17,height: 22)
-                        .foregroundColor(Color.text01)
-                        .padding(8)
-                }
-
                 HStack(alignment: .top) {
                     Text("오늘의 사연을\n신청해보세요")
                         .font(.PretendardTitle1Bold)
@@ -60,7 +48,7 @@ struct WriteView: View {
 
                 // 텍스트 입력 영역
                 ZStack(alignment: .topLeading) {
-                    RoundedRectangle(cornerRadius:15)
+                    RoundedRectangle(cornerRadius: 15)
                         .fill(Color.text01)
                     TextEditor(text: $userInput)
                         .padding(16)
@@ -93,6 +81,7 @@ struct WriteView: View {
                         // 사연 작성 완료 처리
                         isTextEditorFocused = false
                         userInput = ""
+                        navigationManager.push(to: .loading)
                     }
                 }
                 .frame(maxWidth: .infinity, minHeight: 52)

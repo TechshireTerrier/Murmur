@@ -10,13 +10,13 @@ import SwiftUI
 struct RadioControlButton: View {
     let isPlaying: Bool
     let didTapPlayButton: () -> Void
-    
+
     var body: some View {
         Button(action: didTapPlayButton) {
             HStack(spacing: 8) {
                 Image(systemName: isPlaying ? "stop.fill" : "play.fill")
                     .font(.system(size: 16, weight: .medium))
-                
+
                 Text(isPlaying ? "정지" : "재생")
                     .font(.PretendardCalloutBold)
             }

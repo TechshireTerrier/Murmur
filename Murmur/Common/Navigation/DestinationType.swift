@@ -19,4 +19,7 @@ enum DestinationType {
     case detailStory // 사연 상세
     case modifyStory // 사연 수정
     case radio // 라디오
+
+    // etc
+    case loading // 로딩 화면
 }

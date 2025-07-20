@@ -9,26 +9,32 @@ import SwiftUI
 
 struct RadioTestView: View {
     @StateObject private var viewModel = RadioTestViewModel()
-    
+    @EnvironmentObject private var navigationManager: NavigationManager
+
     var body: some View {
         NavigationView {
             ZStack {
                 Color.Gray900
                     .ignoresSafeArea()
-                
+
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
-                        
                         UserStorySection(story: viewModel.currentStory)
-                        
+
                         RadioSubtitleView(subtitle: viewModel.currentSubtitle)
-                        
+
                         RadioControlButton(
                             isPlaying: viewModel.isPlaying,
                             didTapPlayButton: {
                                 viewModel.playButtonTapped()
                             }
                         )
+                        Button {
+                            navigationManager.popToRoot()
+                        } label: {
+                            Text("닫기")
+                                .modifier(LongButtonModifier(buttonColor: Color.gray400))
+                        }
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 16)
@@ -43,24 +49,24 @@ struct RadioTestView: View {
 
 struct UserStorySection: View {
     let story: UserStory
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             Text("사용자 스토리")
                 .font(.PretendardTitle3Bold)
                 .foregroundColor(.KeyMint)
-            
+
             VStack(alignment: .leading, spacing: 12) {
                 PropertyRow(title: "생성일", value: story.createdAt.toFormattedString())
                 PropertyRow(title: "감정 키워드", value: story.emotionKeywords.joined(separator: ", "))
                 PropertyRow(title: "추천곡", value: "\(story.recommendedSongAuthor) - \(story.recommendedSongTitle)")
             }
-            
+
             VStack(alignment: .leading, spacing: 8) {
                 Text("내용")
                     .font(.PretendardCalloutBold)
                     .foregroundColor(.Text03)
-                
+
                 Text(story.content)
                     .font(.PretendardBody)
                     .foregroundColor(.Text02)
@@ -79,13 +85,13 @@ struct UserStorySection: View {
 struct PropertyRow: View {
     let title: String
     let value: String
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(title)
                 .font(.PretendardCalloutBold)
                 .foregroundColor(.Text04)
-            
+
             Text(value)
                 .font(.PretendardCallout)
                 .foregroundColor(.Text02)
