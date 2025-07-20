@@ -5,7 +5,6 @@
 //  Created by gabi on 6/28/25.
 //
 
-import Foundation
 import SwiftUI
 
 struct EmotionLabelModifier: ViewModifier {
