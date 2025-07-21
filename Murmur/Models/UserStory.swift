@@ -6,14 +6,33 @@
 //
 
 import Foundation
+import SwiftData
 
-struct UserStory: Identifiable {
-    let id = UUID()
-    let createdAt: Date
-    let content: String
-    let emotionKeywords: [String]
-    let recommendedSongAuthor: String
-    let recommendedSongTitle: String
+
+@Model
+final class UserStory {
+    var id: UUID
+    var createdAt: Date
+    var content: String
+    var emotionKeywords: [String]
+    var recommendedSongAuthor: String
+    var recommendedSongTitle: String
+
+    init(
+        id: UUID = UUID(),
+        createdAt: Date = Date(),
+        content: String,
+        emotionKeywords: [String] = [],
+        recommendedSongAuthor: String = "",
+        recommendedSongTitle: String = ""
+    ) {
+        self.id = id
+        self.createdAt = createdAt
+        self.content = content
+        self.emotionKeywords = emotionKeywords
+        self.recommendedSongAuthor = recommendedSongAuthor
+        self.recommendedSongTitle = recommendedSongTitle
+    }
 }
 
 struct RadioScript {
@@ -24,3 +43,4 @@ struct SubtitleSegment {
     let text: String
     let originalRange: NSRange
 }
+

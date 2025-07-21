@@ -6,12 +6,28 @@
 //
 
 import Foundation
+import SwiftData
 
 // TODO: - 임시
-struct Story: Identifiable {
-    let id = UUID()
-    let createdAt: Date
-    let content: String
-    let recommendedSongAuthor: String
-    let recommendedSongTitle: String
+@Model
+final class Story {
+    var id: UUID
+    var createdAt: Date
+    var content: String
+    var recommendedSongAuthor: String
+    var recommendedSongTitle: String
+    
+    init(
+        id: UUID = UUID(),
+        createdAt: Date = Date(),
+        content: String,
+        recommendedSongAuthor: String = "",
+        recommendedSongTitle: String = ""
+    ) {
+        self.id = id
+        self.createdAt = createdAt
+        self.content = content
+        self.recommendedSongAuthor = recommendedSongAuthor
+        self.recommendedSongTitle = recommendedSongTitle
+    }
 }
