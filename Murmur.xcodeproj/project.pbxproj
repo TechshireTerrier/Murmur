@@ -57,6 +57,7 @@
 		AAA596522E118EA300923793 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596512E118EA300923793 /* WriteViewModel.swift */; };
 		AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596532E1190CB00923793 /* WriteMurmurButton.swift */; };
 		D1B9A9A72E11290800B7BAA0 /* UserStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9A9A62E11290800B7BAA0 /* UserStory.swift */; };
+		F557DE362E2EC2A300555B8A /* MurmurTextClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F557DE352E2EC2A300555B8A /* MurmurTextClassifier.mlmodel */; };
 		F5964E4E2E228F2D00C8C507 /* SubtitleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */; };
 		F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */; };
 		F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */; };
@@ -115,6 +116,7 @@
 		AAA596512E118EA300923793 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
 		AAA596532E1190CB00923793 /* WriteMurmurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteMurmurButton.swift; sourceTree = "<group>"; };
 		D1B9A9A62E11290800B7BAA0 /* UserStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStory.swift; sourceTree = "<group>"; };
+		F557DE352E2EC2A300555B8A /* MurmurTextClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MurmurTextClassifier.mlmodel; sourceTree = "<group>"; };
 		F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSessionManager.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			children = (
 				1488E4CC2E0AC8D400988B12 /* Fonts */,
 				14363FD72E0A9EB80030A623 /* Assets.xcassets */,
+				F557DE352E2EC2A300555B8A /* MurmurTextClassifier.mlmodel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				145A13542E1957DA00FE8EDF /* RadioService.swift in Sources */,
 				145A13602E195A5100FE8EDF /* DestinationType.swift in Sources */,
 				F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */,
+				F557DE362E2EC2A300555B8A /* MurmurTextClassifier.mlmodel in Sources */,
 				145A13552E1957DA00FE8EDF /* RadioServiceImpl.swift in Sources */,
 				D1B9A9A72E11290800B7BAA0 /* UserStory.swift in Sources */,
 				145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */,
