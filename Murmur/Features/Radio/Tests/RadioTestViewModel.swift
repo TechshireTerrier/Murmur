@@ -1,4 +1,3 @@
-//
 //  TestViewModel.swift
 //  Murmur
 //
@@ -6,6 +5,7 @@
 //
 
 import Foundation
+import CoreML
 
 final class RadioTestViewModel: ObservableObject {
     @Published var currentStory: UserStory
@@ -13,6 +13,11 @@ final class RadioTestViewModel: ObservableObject {
     @Published var subtitleSegments: [SubtitleSegment] = []
     @Published var currentSubtitle: String = ""
     @Published var isPlaying: Bool = false
+    
+    // --- 키워드 추출 관련 프로퍼티 추가 ---
+    @Published var sentenceKeywords: [(sentence: String, keyword: String)] = []
+    private let predictor = ScriptKeywordPredictor()
+    // --- 끝 ---
     
     private let sessionManager: RadioSessionManager
     
@@ -80,5 +85,42 @@ final class RadioTestViewModel: ObservableObject {
         
         isPlaying = false
         currentSubtitle = ""
+    }
+    
+    // --- 키워드 추출 함수 추가 ---
+    func extractKeywordsFromScript() {
+        guard let script = generatedScript else { return }
+        let sentences = splitScriptIntoSentences(script.fullScript)
+        sentenceKeywords = sentences.compactMap { sentence in
+            if let keyword = predictor.predictKeyword(for: sentence) {
+                return (sentence, keyword)
+            } else {
+                return nil
+            }
+        }
+    }
+    
+    private func splitScriptIntoSentences(_ script: String) -> [String] {
+        // 마침표, 물음표, 느낌표 등으로 분리 (간단 예시)
+        let separators = CharacterSet(charactersIn: ".!?")
+        let sentences = script.components(separatedBy: separators)
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+        return sentences
+    }
+    // --- 끝 ---
+}
+
+final class ScriptKeywordPredictor {
+    private let model = MurmurTextClassifier()
+    
+    func predictKeyword(for sentence: String) -> String? {
+        do {
+            let prediction = try model.prediction(text: sentence)
+            return prediction.label
+        } catch {
+            print("Prediction failed: \(error)")
+            return nil
+        }
     }
 }

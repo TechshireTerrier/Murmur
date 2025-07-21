@@ -29,6 +29,46 @@ struct RadioTestView: View {
                                 viewModel.playButtonTapped()
                             }
                         )
+                        
+                        // --- 키워드 추출 버튼 및 결과 (여기서부터 추가) ---
+                        VStack(alignment: .leading, spacing: 12) {
+                            Button(action: {
+                                viewModel.extractKeywordsFromScript()
+                            }) {
+                                HStack {
+                                    Image(systemName: "tag.fill")
+                                    Text("키워드 추출")
+                                }
+                                .font(.PretendardCalloutBold)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.PointMint)
+                                .cornerRadius(8)
+                            }
+                            
+                            if !viewModel.sentenceKeywords.isEmpty {
+                                Text("문장별 예측 키워드")
+                                    .font(.PretendardCalloutBold)
+                                    .foregroundColor(.Text03)
+                                
+                                ForEach(viewModel.sentenceKeywords, id: \.sentence) { item in
+                                    HStack(alignment: .top) {
+                                        Text("• \(item.sentence)")
+                                            .font(.PretendardCallout)
+                                            .foregroundColor(.Text02)
+                                        Spacer()
+                                        Text(item.keyword)
+                                            .font(.PretendardCalloutBold)
+                                            .foregroundColor(.PointMint)
+                                    }
+                                    .padding(.vertical, 2)
+                                }
+                            }
+                        }
+                        .padding(20)
+                        .background(Color.Gray800.opacity(0.5))
+                        .cornerRadius(16)
+                        // --- 키워드 추출 영역 끝 ---
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 16)
