@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct MurmurApp: App {
     @StateObject private var navigationManager = NavigationManager()
+    @StateObject private var musicRecommendationVM = MusicRecommendationViewModel()
 
     var body: some Scene {
         WindowGroup {
@@ -21,6 +22,10 @@ struct MurmurApp: App {
             }
             .preferredColorScheme(.dark)
             .environmentObject(navigationManager)
+            .environmentObject(musicRecommendationVM)
+            .task {
+                await musicRecommendationVM.requestMusicAuthorization()
+            }
         }
     }
 }

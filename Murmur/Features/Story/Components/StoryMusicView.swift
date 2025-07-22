@@ -5,12 +5,15 @@
 //  Created by gabi on 6/29/25.
 //
 
+import MusicKit
 import SwiftUI
 
 struct StoryMusicView: View {
+    let musicRecommendationVM: MusicRecommendationViewModel
+
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var widthSize: CGFloat { screenWidth * 0.9 }
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("이 사연의 추천곡")
@@ -18,25 +21,45 @@ struct StoryMusicView: View {
                 .accessibilityLabel("이 사연의 추천곡")
                 .accessibilityAddTraits(.isHeader)
                 .padding(.bottom, 16)
-            
+
             HStack {
-                VStack(alignment: .leading) {
-                    Text("Ladybird")
-                        .font(.PretendardTitle2Bold)
-                        .foregroundStyle(Color.text07)
+                HStack {
+                    if let artwork = musicRecommendationVM.recommendedTrack?.artwork {
+                        ArtworkImage(artwork, width: 100)
+                            .cornerRadius(10)
+                            .shadow(radius: 5)
+                            .padding(.trailing, 16)
+                    }
+
+                    VStack(alignment: .leading) {
+                        MarqueeText(
+                            text: musicRecommendationVM.recommendedTrack?.title ?? "노래 제목",
+                            font: UIFont(name: "Pretendard-Bold", size: 22)!,
+                            color: Color.text07,
+                            leftFade: 16,
+                            rightFade: 16,
+                            startDelay: 1
+                        )
                         .accessibilityLabel("노래 제목")
                         .accessibilityAddTraits(.isStaticText)
-                    
-                    Text("NewDad")
-                        .font(.PretendardBody)
-                        .foregroundStyle(Color.text07)
+
+                        MarqueeText(
+                            text: musicRecommendationVM.recommendedTrack?.artistName ?? "노래 가수",
+                            font: UIFont(name: "Pretendard-Regular", size: 17)!,
+                            color: Color.text07,
+                            leftFade: 16,
+                            rightFade: 16,
+                            startDelay: 1
+                        )
                         .accessibilityLabel("노래 가수")
                         .accessibilityAddTraits(.isStaticText)
+                    }
                 }
-                .frame(width: StoryMusicView.screenWidth * 0.6, alignment: .leading)
-                
+                .frame(width: StoryMusicView.screenWidth * 0.7, alignment: .leading)
+
                 Button {
                     print("재생 버튼 눌림")
+                    musicRecommendationVM.playPreview()
                 } label: {
                     Image(systemName: "play.circle.fill")
                         .resizable()
@@ -44,7 +67,7 @@ struct StoryMusicView: View {
                         .foregroundStyle(Color.text07)
                 }
             }
-            .padding(24)
+            .padding(12)
             .frame(width: StoryMusicView.screenWidth * 0.9)
             .background(Color.gray50)
             .clipShape(RoundedRectangle(cornerRadius: 15))
@@ -53,5 +76,5 @@ struct StoryMusicView: View {
 }
 
 #Preview {
-    StoryMusicView()
+    StoryMusicView(musicRecommendationVM: MusicRecommendationViewModel())
 }

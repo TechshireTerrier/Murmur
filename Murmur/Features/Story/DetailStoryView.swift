@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct DetailStoryView: View {
+    @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
     var body: some View {
         ScrollView {
             VStack {
                 VStack(spacing: 20) {
                     SongStoryView()
                     DailyEmotionView()
-                    StoryMusicView()
+                    StoryMusicView(musicRecommendationVM: musicRecommendationVM)
                 }
                 DetailStoryButtonView()
             }
+        }
+        .onDisappear {
+            musicRecommendationVM.stopPlayback()
         }
     }
 }
