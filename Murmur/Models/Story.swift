@@ -11,6 +11,7 @@ import Foundation
 struct Story: Identifiable {
     let id = UUID()
     let createdAt: Date
+    let emotions: [String]
     let content: String
     let recommendedSongAuthor: String
     let recommendedSongTitle: String
