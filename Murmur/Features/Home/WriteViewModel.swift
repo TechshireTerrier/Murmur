@@ -2,19 +2,41 @@ import SwiftUI
 import AVFoundation
 import Speech
 
+import Foundation
+import SwiftData // 1. SwiftData 임포트
+
+@MainActor
 class WriteViewModel: ObservableObject {
-    @Published var userText: String = ""
-    @Published var showFailAlert: Bool = false
+    @Published var showFailAlert = false
+    
+    private var modelContext: ModelContext // 2. modelContext를 저장할 프로퍼티 추가
+    
+    // 3. 초기화(init) 메서드에서 modelContext를 받도록 수정
+    init(modelContext: ModelContext) {
+        self.modelContext = modelContext
+    }
+    
+    // 4. 데이터를 저장하는 함수 추가
+    func saveMurmur(text: String) {
+        // 입력값 유효성 검사 등 추가 로직을 여기에 넣을 수 있습니다.
+        if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            showFailAlert = true
+        } else {
+            let murmur = Murmur(text: text)
+            modelContext.insert(murmur)
+            // 성공 시 다른 액션 (예: 알림 표시)도 여기서 처리 가능
+        }
+    }
 }
 class AudioRecorder: NSObject, ObservableObject {
     private var audioEngine = AVAudioEngine()
     private var speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))
     private var request = SFSpeechAudioBufferRecognitionRequest()
     private var recognitionTask: SFSpeechRecognitionTask?
-
+    
     @Published var isRecording = false
     var userInputBinding: Binding<String>?
-
+    
     func startRecording() {
         SFSpeechRecognizer.requestAuthorization { authStatus in
             DispatchQueue.main.async {
@@ -27,28 +49,28 @@ class AudioRecorder: NSObject, ObservableObject {
             }
         }
     }
-
+    
     func stopRecording() {
         audioEngine.stop()
         request.endAudio()
         isRecording = false
     }
-
+    
     private func recordAndRecognizeSpeech() {
         let node = audioEngine.inputNode
         let recordingFormat = node.outputFormat(forBus: 0)
-
+        
         request = SFSpeechAudioBufferRecognitionRequest()
         request.shouldReportPartialResults = true
-
+        
         node.removeTap(onBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer, _) in
             self.request.append(buffer)
         }
-
+        
         audioEngine.prepare()
         try? audioEngine.start()
-
+        
         recognitionTask = speechRecognizer?.recognitionTask(with: request) { result, error in
             if let result = result {
                 DispatchQueue.main.async {

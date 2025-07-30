@@ -1,16 +1,21 @@
 import SwiftUI
 import AVFoundation
 import Speech
+import SwiftData
 
 struct WriteView: View {
-
-    @StateObject private var viewModel = WriteViewModel()
+    @StateObject private var viewModel: WriteViewModel
     @StateObject private var audioRecorder = AudioRecorder()
     @State private var userInput: String = ""
     @State private var keyboardHeight: CGFloat = 0
     private let placeholder = "오늘 어떤 일이 있었나요?\n하루를 떠올리며 입력해보세요"
     @FocusState private var isTextEditorFocused: Bool
     @EnvironmentObject private var navigationManager: NavigationManager
+    @Environment(\.modelContext) private var modelContext
+
+    init(modelContext: ModelContext) {
+        _viewModel = StateObject(wrappedValue: WriteViewModel(modelContext: modelContext))
+    }
 
     var body: some View {
         ZStack {
@@ -28,7 +33,7 @@ struct WriteView: View {
                 }) {
                     Image("Chevron_Left")
                         .resizable()
-                        .frame(width: 17,height: 22)
+                        .frame(width: 17, height: 22)
                         .foregroundColor(Color.text01)
                         .padding(8)
                 }
@@ -60,7 +65,7 @@ struct WriteView: View {
 
                 // 텍스트 입력 영역
                 ZStack(alignment: .topLeading) {
-                    RoundedRectangle(cornerRadius:15)
+                    RoundedRectangle(cornerRadius: 15)
                         .fill(Color.text01)
                     TextEditor(text: $userInput)
                         .padding(16)
@@ -79,27 +84,26 @@ struct WriteView: View {
                 .frame(minHeight: 140, maxHeight: 404) // 텍스트 입력 영역 높이 고정
                 .padding(.horizontal, 16)
 
-                // 작성 완료 버튼 (텍스트 입력 영역 바로 아래)
-                WriteMurmurButton(
-                    title: "작성 완료",
-                    font: .PretendardBodySemiBold,
-                    backgroundColor: Color.PointMint,
-                    foregroundColor: Color.Gray900,
-                    cornerRadius: 15
-                ) {
-                    if userInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                        viewModel.showFailAlert = true
-                    } else {
-                        // 사연 작성 완료 처리
+                // 작성 완료 버튼
+                Button(action: {
+                    viewModel.saveMurmur(text: userInput)
+                    if !viewModel.showFailAlert {
                         isTextEditorFocused = false
                         userInput = ""
                     }
+                }) {
+                    Text("작성 완료")
+                        .font(.PretendardBodySemiBold)
+                        .foregroundColor(Color.Gray900)
+                        .frame(maxWidth: .infinity, minHeight: 52)
+                        .background(Color.PointMint)
+                        .cornerRadius(15)
                 }
-                .frame(maxWidth: .infinity, minHeight: 52)
                 .padding(.horizontal, 16)
+                
                 Spacer()
             }
-            .padding(.top, 24) // 전체 VStack 상단 여백
+            .padding(.top, 24)
 
             // 실패 알림 뷰
             FailAlertView(isPresented: $viewModel.showFailAlert)
@@ -119,7 +123,19 @@ struct WriteView: View {
     }
 }
 
+@Model
+class Murmur {
+    var text: String
+
+    init(text: String) {
+        self.text = text
+    }
+}
+
 #Preview {
-    WriteView()
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Murmur.self, configurations: config)
+
+    return WriteView(modelContext: container.mainContext)
         .preferredColorScheme(.dark)
 }
