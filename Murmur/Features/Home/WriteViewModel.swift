@@ -17,13 +17,13 @@ class WriteViewModel: ObservableObject {
     }
     
     // 4. 데이터를 저장하는 함수 추가
-    func saveMurmur(text: String) {
+    func saveStory(content: String) {
         // 입력값 유효성 검사 등 추가 로직을 여기에 넣을 수 있습니다.
-        if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+        if content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             showFailAlert = true
         } else {
-            let murmur = Murmur(text: text)
-            modelContext.insert(murmur)
+            let story = Story(content: content)
+            modelContext.insert(story)
             // 성공 시 다른 액션 (예: 알림 표시)도 여기서 처리 가능
         }
     }

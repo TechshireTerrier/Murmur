@@ -86,7 +86,7 @@ struct WriteView: View {
 
                 // 작성 완료 버튼
                 Button(action: {
-                    viewModel.saveMurmur(text: userInput)
+                    viewModel.saveStory(content: userInput)
                     if !viewModel.showFailAlert {
                         isTextEditorFocused = false
                         userInput = ""
@@ -123,18 +123,9 @@ struct WriteView: View {
     }
 }
 
-@Model
-class Murmur {
-    var text: String
-
-    init(text: String) {
-        self.text = text
-    }
-}
-
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Murmur.self, configurations: config)
+    let container = try! ModelContainer(for: Story.self, configurations: config)
 
     return WriteView(modelContext: container.mainContext)
         .preferredColorScheme(.dark)
