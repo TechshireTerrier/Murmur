@@ -4,8 +4,6 @@
 //
 //  Created by 김현기 on 7/5/25.
 //
-
-import SwiftUI
 import SwiftUI
 import SwiftData
 

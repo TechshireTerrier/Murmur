@@ -8,7 +8,6 @@
 import Foundation
 import SwiftData
 
-
 @Model
 final class UserStory {
     var id: UUID

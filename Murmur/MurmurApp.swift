@@ -11,7 +11,6 @@ import SwiftData
 @main
 struct MurmurApp: App {
     @StateObject private var navigationManager = NavigationManager()
-
     @Environment(\.modelContext) private var modelContext
 
     var body: some Scene {

@@ -1,7 +1,6 @@
 import SwiftUI
 import AVFoundation
 import Speech
-
 import Foundation
 import SwiftData // 1. SwiftData 임포트
 
@@ -15,7 +14,6 @@ class WriteViewModel: ObservableObject {
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
     }
-    
     // 4. 데이터를 저장하는 함수 추가
     func saveStory(content: String) {
         // 입력값 유효성 검사 등 추가 로직을 여기에 넣을 수 있습니다.
