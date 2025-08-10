@@ -8,15 +8,15 @@ struct WriteView: View {
     @StateObject private var audioRecorder = AudioRecorder()
     @State private var userInput: String = ""
     @State private var keyboardHeight: CGFloat = 0
+    @State private var shouldNavigateToLoadingView = false
     private let placeholder = "오늘 어떤 일이 있었나요?\n하루를 떠올리며 입력해보세요"
     @FocusState private var isTextEditorFocused: Bool
     @EnvironmentObject private var navigationManager: NavigationManager
     @Environment(\.modelContext) private var modelContext
-
+    
     init(modelContext: ModelContext) {
         _viewModel = StateObject(wrappedValue: WriteViewModel(modelContext: modelContext))
     }
-
     var body: some View {
         ZStack {
             // 배경색 및 전체 터치 시 포커스 해제
@@ -25,7 +25,6 @@ struct WriteView: View {
                 .onTapGesture {
                     isTextEditorFocused = false
                 }
-
             VStack(alignment: .leading, spacing: 24) {
                 // 상단 뒤로가기 버튼
                 Button(action: {
@@ -37,15 +36,13 @@ struct WriteView: View {
                         .foregroundColor(Color.text01)
                         .padding(8)
                 }
-
                 HStack(alignment: .top) {
                     Text("오늘의 사연을\n신청해보세요")
                         .font(.PretendardTitle1Bold)
                         .foregroundColor(Color.text01)
                         .kerning(0.38)
-
                     Spacer()
-
+                    
                     Button(action: {
                         if audioRecorder.isRecording {
                             audioRecorder.stopRecording()
@@ -62,7 +59,7 @@ struct WriteView: View {
                 }
                 .padding(.top, 24)
                 .padding(.horizontal, 24)
-
+                
                 // 텍스트 입력 영역
                 ZStack(alignment: .topLeading) {
                     RoundedRectangle(cornerRadius: 15)
@@ -83,12 +80,13 @@ struct WriteView: View {
                 }
                 .frame(minHeight: 140, maxHeight: 404) // 텍스트 입력 영역 높이 고정
                 .padding(.horizontal, 16)
-
+                
                 // 작성 완료 버튼
                 Button(action: {
                     viewModel.saveStory(content: userInput)
                     if !viewModel.showFailAlert {
                         isTextEditorFocused = false
+                        shouldNavigateToLoadingView = true
                         userInput = ""
                     }
                 }) {
@@ -100,11 +98,17 @@ struct WriteView: View {
                         .cornerRadius(15)
                 }
                 .padding(.horizontal, 16)
-                
+                NavigationLink(
+                    destination: LoadingView(),
+                    isActive: $shouldNavigateToLoadingView
+                ) {
+                    EmptyView()
+                }
+                .hidden()
                 Spacer()
             }
             .padding(.top, 24)
-
+            
             // 실패 알림 뷰
             FailAlertView(isPresented: $viewModel.showFailAlert)
         }
@@ -122,11 +126,10 @@ struct WriteView: View {
         }
     }
 }
-
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Story.self, configurations: config)
-
+    
     return WriteView(modelContext: container.mainContext)
         .preferredColorScheme(.dark)
 }

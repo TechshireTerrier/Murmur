@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct TotalStoryListView: View {
-    @StateObject private var viewModel = TotalStoryListViewModel()
+    @StateObject private var viewModel: TotalStoryListViewModel
     @EnvironmentObject private var navigationManager: NavigationManager
+    
+    init(modelContext: ModelContext) {
+        _viewModel = StateObject(wrappedValue: TotalStoryListViewModel(modelContext: modelContext))
+    }
 
     var body: some View {
         ZStack {
@@ -64,9 +69,16 @@ struct TotalStoryListView: View {
                 navigationManager.pop()
             }
         }
+        .onAppear {
+            viewModel.refreshStories()
+        }
     }
 }
 
 #Preview {
-    TotalStoryListView()
+    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+    let container = try! ModelContainer(for: Story.self, configurations: config)
+    
+    return TotalStoryListView(modelContext: container.mainContext)
+        .preferredColorScheme(.dark)
 }

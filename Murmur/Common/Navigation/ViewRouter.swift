@@ -22,7 +22,7 @@ func ViewRouter(for destination: DestinationType, modelContext: ModelContext) ->
         // TODO: - STT 사연 신청 확인 뷰 구현
         EmptyView()
     case .totalStoryList:
-        TotalStoryListView()
+        TotalStoryListView(modelContext: modelContext)
     case .detailStory:
         DetailStoryView()
     case .modifyStory:
