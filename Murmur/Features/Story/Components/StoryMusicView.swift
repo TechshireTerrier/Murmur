@@ -40,7 +40,7 @@ struct StoryMusicView: View {
                             rightFade: 16,
                             startDelay: 1
                         )
-                        .accessibilityLabel("노래 제목")
+                        .accessibilityLabel(musicRecommendationVM.recommendedTrack?.title ?? "노래 제목")
                         .accessibilityAddTraits(.isStaticText)
 
                         MarqueeText(
@@ -51,7 +51,7 @@ struct StoryMusicView: View {
                             rightFade: 16,
                             startDelay: 1
                         )
-                        .accessibilityLabel("노래 가수")
+                        .accessibilityLabel(musicRecommendationVM.recommendedTrack?.artistName ?? "노래 가수")
                         .accessibilityAddTraits(.isStaticText)
                     }
                 }

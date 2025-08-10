@@ -53,9 +53,6 @@ struct TotalStoryListView: View {
                             ForEach(viewModel.stories) { story in
                                 StoryListCard(story: story)
                                     .padding(.bottom, 12)
-                                    .accessibilityLabel("\(story.createdAt.toFormattedString()), 추출된 감정: \(story.emotions), 사연 내용: \(story.content), 추천곡 \(story.recommendedSongAuthor)의 \(story.recommendedSongTitle)")
-                                    .accessibilityHint("무작위로 사연 하나가 열려요.")
-                                    .accessibilityAddTraits(.isButton)
                             }
                         }
                     }
