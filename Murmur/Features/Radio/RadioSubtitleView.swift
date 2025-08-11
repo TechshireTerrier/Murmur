@@ -11,29 +11,24 @@ struct RadioSubtitleView: View {
     let subtitle: String
     
     var body: some View {
-        VStack(spacing: 12) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.Gray800)
-                    .frame(maxWidth: .infinity, minHeight: 80)
-                
-                Text(subtitle.isEmpty ? "재생을 시작하세요" : subtitle)
-                    .font(.PretendardBody)
-                    .foregroundColor(subtitle.isEmpty ? .Text04 : .Text01)
+        Rectangle()
+            .fill(Color.Gray50)
+            .frame(width: 300, height: 60)
+            .overlay(
+                Text(subtitle)
+                    .font(.DXYeonghwaJamak2ExtraBold)
+                    .foregroundColor(.Text07)
                     .multilineTextAlignment(.center)
-                    .padding(16)
+                    .padding(.horizontal, 15)
+                    .padding(.vertical, 8)
                     .transition(.asymmetric(
                         insertion: .move(edge: .bottom).combined(with: .opacity),
                         removal: .move(edge: .top).combined(with: .opacity)
                     ))
                     .id(subtitle)
-            }
+            )
             .clipped()
             .animation(.easeInOut(duration: 1.2), value: subtitle)
-        }
-        .padding(20)
-        .background(Color.Gray700.opacity(0.3))
-        .cornerRadius(16)
     }
 }
 

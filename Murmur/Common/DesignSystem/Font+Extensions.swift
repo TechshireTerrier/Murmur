@@ -35,4 +35,6 @@ extension Font {
     static let PretendardSubheadlineBold = Font.custom("Pretendard-Bold", size: 15, relativeTo: .subheadline)
     
     static let PretendardOnAir = Font.custom("Pretendard-Bold", size: 74)
+    
+    static let DXYeonghwaJamak2ExtraBold = Font.custom("DXYeonghwaJamak2ExtraBold", size: 17)
 }

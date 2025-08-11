@@ -30,6 +30,8 @@ func ViewRouter(for destination: DestinationType, modelContext: ModelContext) ->
         EmptyView()
     case .radio:
         // TODO: - 라디오듣기 뷰 구현
-        RadioTestView()
+        RadioView()
+    case .loading:
+        LoadingView()
     }
 }

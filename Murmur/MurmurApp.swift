@@ -12,6 +12,7 @@ import SwiftData
 struct MurmurApp: App {
     @StateObject private var navigationManager = NavigationManager()
     @Environment(\.modelContext) private var modelContext
+    @StateObject private var musicRecommendationVM = MusicRecommendationViewModel()
 
     var body: some Scene {
         WindowGroup {
@@ -23,6 +24,10 @@ struct MurmurApp: App {
             }
             .preferredColorScheme(.dark)
             .environmentObject(navigationManager)
+            .environmentObject(musicRecommendationVM)
+            .task {
+                await musicRecommendationVM.requestMusicAuthorization()
+            }
         }
         .modelContainer(for: [Story.self, UserStory.self])
     }

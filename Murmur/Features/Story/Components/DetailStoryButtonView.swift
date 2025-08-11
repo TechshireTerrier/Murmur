@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct DetailStoryButtonView: View {
+    @EnvironmentObject private var navigationManager: NavigationManager
+
     var body: some View {
         Button {
-            print("라디오 듣기 버튼 눌림")
+            navigationManager.push(to: .radio)
         } label: {
             Text("라디오 듣기")
                 .modifier(LongButtonModifier(buttonColor: Color.keyMint))
@@ -18,9 +20,9 @@ struct DetailStoryButtonView: View {
         .accessibilityLabel("라디오 듣기")
         .accessibilityAddTraits(.isButton)
         .padding(.top, 20)
-        
+
         Button {
-            print("닫기 버튼 눌림")
+            navigationManager.popToRoot()
         } label: {
             Text("닫기")
                 .modifier(LongButtonModifier(buttonColor: Color.gray400))

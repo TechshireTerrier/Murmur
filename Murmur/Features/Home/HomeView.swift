@@ -28,6 +28,7 @@ struct HomeView: View {
                     textColor: .text07,
                     bgColor: .keyMint
                 )
+                .accessibilityLabel("사연 신청하기 버튼")
                 .padding(.bottom, 12)
 
                 MurmurButton(
@@ -39,6 +40,7 @@ struct HomeView: View {
                     textColor: .text07,
                     bgColor: .PointPurple
                 )
+                .accessibilityLabel("사연 보기 버튼")
             }
             .padding(.horizontal, 48)
         }
@@ -59,6 +61,8 @@ struct OnAirSignView: View {
             .overlay(
                 OnAirText(isOn: isOn)
             )
+            .accessibilityLabel(isOn ? "ON AIR 불 켜짐" : "ON AIR 불 꺼짐")
+            .accessibilityHint(isOn ? "방송 중이에요. 오늘의 사연이 접수되었어요." : "방송 대기 중이에요. 오늘의 사연이 아직 없어요.")
     }
 }
 

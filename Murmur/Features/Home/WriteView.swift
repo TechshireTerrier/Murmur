@@ -1,7 +1,7 @@
-import SwiftUI
 import AVFoundation
 import Speech
 import SwiftData
+import SwiftUI
 
 struct WriteView: View {
     @StateObject private var viewModel: WriteViewModel
@@ -38,6 +38,8 @@ struct WriteView: View {
                 }
                 HStack(alignment: .top) {
                     Text("오늘의 사연을\n신청해보세요")
+                        .accessibilityLabel("오늘의 사연을 신청해보세요")
+                        .accessibilityAddTraits(.isHeader)
                         .font(.PretendardTitle1Bold)
                         .foregroundColor(Color.text01)
                         .kerning(0.38)
@@ -55,6 +57,8 @@ struct WriteView: View {
                             .frame(width: 20, height: 30)
                             .foregroundColor(Color.text01)
                     }
+                    .accessibilityLabel("음성으로 기록하기")
+                    .accessibilityAddTraits(.isButton)
                     .padding(.top, 28) // 텍스트 첫줄 높이에 맞춰 약간 내려줌
                 }
                 .padding(.top, 24)
@@ -78,6 +82,9 @@ struct WriteView: View {
                             .font(.PretendardBody)
                     }
                 }
+                .accessibilityLabel(isTextEditorFocused ? "사연 입력중" : "사연 입력란")
+                .accessibilityHint(isTextEditorFocused ? "300자까지 작성할 수 있어요." : "오늘 어떤 일이 있었나요? 하루를 떠올리며 입력해보세요.")
+                .accessibilityAddTraits(.allowsDirectInteraction)
                 .frame(minHeight: 140, maxHeight: 404) // 텍스트 입력 영역 높이 고정
                 .padding(.horizontal, 16)
                 
@@ -88,6 +95,7 @@ struct WriteView: View {
                         isTextEditorFocused = false
                         shouldNavigateToLoadingView = true
                         userInput = ""
+                        navigationManager.push(to: .loading)
                     }
                 }) {
                     Text("작성 완료")

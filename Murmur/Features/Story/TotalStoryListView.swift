@@ -30,6 +30,9 @@ struct TotalStoryListView: View {
                             .padding(.vertical, 10)
                             .padding(.horizontal, 12)
                     }
+                    .accessibilityLabel("랜덤 사연 읽기")
+                    .accessibilityHint("무작위로 사연 하나가 열려요.")
+                    .accessibilityAddTraits(.isButton)
                     .background(Color.PointMint)
                     .cornerRadius(50)
                 }

@@ -16,6 +16,8 @@ struct CustomBackButton: ToolbarContent {
                 Image(systemName: "chevron.left")
                     .foregroundColor(Color.text01)
                     .font(.system(size: 17))
+                    .accessibilityLabel("뒤로가기")
+                    .accessibilityAddTraits(.isButton)
             }
         }
     }
