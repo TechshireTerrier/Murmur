@@ -37,7 +37,8 @@ struct LoadingView: View {
             }
             .onChange(of: musicRecommendationVM.recommendedTrack) { newValue in
                 if newValue != nil {
-                    navigationManager.push(to: .detailStory)
+//                    navigationManager.push(to: .detailStory)
+                    navigationManager.replace(to: .detailStory)
                 }
             }
         } else {

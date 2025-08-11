@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 final class RadioViewModel: ObservableObject {
-    @Published var currentStory: UserStory
+    @Published var currentStory: Story
     @Published var generatedScript: RadioScript?
     @Published var isPlaying: Bool = false
     @Published var currentSubtitle: String = ""

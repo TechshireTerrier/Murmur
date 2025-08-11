@@ -47,7 +47,6 @@
 		14EBA5F52E0FB7E800314128 /* MurmurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5F42E0FB7E800314128 /* MurmurButton.swift */; };
 		14EBA5F72E0FC3F200314128 /* TotalStoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */; };
 		14EBA5F92E0FC5B000314128 /* TotalStoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */; };
-		14EBA5FB2E0FC9F200314128 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5FA2E0FC9ED00314128 /* Story.swift */; };
 		14EBA5FD2E0FCB3500314128 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5FC2E0FCB3400314128 /* Song.swift */; };
 		14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */; };
 		14EBA6022E0FDB8100314128 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */; };
@@ -60,7 +59,7 @@
 		AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596532E1190CB00923793 /* WriteMurmurButton.swift */; };
 		D1AA6BE32E48735D000E7198 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA6BE22E48734E000E7198 /* RadioView.swift */; };
 		D1AA6BE72E489761000E7198 /* DXYeonghwaJamak2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1AA6BE62E489761000E7198 /* DXYeonghwaJamak2-ExtraBold.ttf */; };
-		D1B9A9A72E11290800B7BAA0 /* UserStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9A9A62E11290800B7BAA0 /* UserStory.swift */; };
+		D1B9A9A72E11290800B7BAA0 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9A9A62E11290800B7BAA0 /* Story.swift */; };
 		F5964E4E2E228F2D00C8C507 /* SubtitleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */; };
 		F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */; };
 		F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */; };
@@ -109,7 +108,6 @@
 		14EBA5F42E0FB7E800314128 /* MurmurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmurButton.swift; sourceTree = "<group>"; };
 		14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStoryListView.swift; sourceTree = "<group>"; };
 		14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStoryListViewModel.swift; sourceTree = "<group>"; };
-		14EBA5FA2E0FC9ED00314128 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		14EBA5FC2E0FCB3400314128 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListCard.swift; sourceTree = "<group>"; };
 		14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
@@ -122,7 +120,7 @@
 		AAA596532E1190CB00923793 /* WriteMurmurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteMurmurButton.swift; sourceTree = "<group>"; };
 		D1AA6BE22E48734E000E7198 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 		D1AA6BE62E489761000E7198 /* DXYeonghwaJamak2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DXYeonghwaJamak2-ExtraBold.ttf"; sourceTree = "<group>"; };
-		D1B9A9A62E11290800B7BAA0 /* UserStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStory.swift; sourceTree = "<group>"; };
+		D1B9A9A62E11290800B7BAA0 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSessionManager.swift; sourceTree = "<group>"; };
@@ -265,9 +263,8 @@
 		1488E4E82E0AF36100988B12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D1B9A9A62E11290800B7BAA0 /* UserStory.swift */,
+				D1B9A9A62E11290800B7BAA0 /* Story.swift */,
 				14EBA5FC2E0FCB3400314128 /* Song.swift */,
-				14EBA5FA2E0FC9ED00314128 /* Story.swift */,
 				1488E4EF2E0AF9A200988B12 /* TempModel.swift */,
 			);
 			path = Models;
@@ -457,7 +454,7 @@
 				145A13602E195A5100FE8EDF /* DestinationType.swift in Sources */,
 				F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */,
 				145A13552E1957DA00FE8EDF /* RadioServiceImpl.swift in Sources */,
-				D1B9A9A72E11290800B7BAA0 /* UserStory.swift in Sources */,
+				D1B9A9A72E11290800B7BAA0 /* Story.swift in Sources */,
 				145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */,
 				14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */,
 				AA7E0E912E2546170037DFED /* CheckSTTView.swift in Sources */,
@@ -477,7 +474,6 @@
 				145A13672E1965C100FE8EDF /* CustomBackButton.swift in Sources */,
 				F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */,
 				14EBA5FD2E0FCB3500314128 /* Song.swift in Sources */,
-				14EBA5FB2E0FC9F200314128 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,12 +611,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Murmur/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4FCV7BL65G;
+				DEVELOPMENT_TEAM = N9BWKB65C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Murmur/Info.plist;
@@ -632,7 +626,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -641,7 +635,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.ada.Murmur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Murmur_Development;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -658,12 +651,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Murmur/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 4FCV7BL65G;
+				DEVELOPMENT_TEAM = N9BWKB65C5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Murmur/Info.plist;
@@ -675,7 +666,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -684,7 +675,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.ada.Murmur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Murmur_Development;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;

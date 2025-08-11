@@ -15,6 +15,11 @@ final class NavigationManager: ObservableObject {
         path.append(destination)
     }
 
+    func replace(to destination: DestinationType) {
+        path.removeLast()
+        path.append(destination)
+    }
+
     // 이전 화면으로 이동
     func pop() {
         path.removeLast()

@@ -7,7 +7,7 @@
 
 // 해당 프로토콜 네이밍 수정 필요.
 protocol RadioService {
-    func generateScript(from story: UserStory) -> RadioScript
+    func generateScript(from story: Story) -> RadioScript
 }
 
 protocol SubtitleService {

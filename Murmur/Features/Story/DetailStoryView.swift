@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailStoryView: View {
     @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
+    @EnvironmentObject private var navigationManager: NavigationManager
+
     var body: some View {
         ScrollView {
             VStack {
@@ -24,6 +26,14 @@ struct DetailStoryView: View {
         .navigationBarBackButtonHidden()
         .onDisappear {
             musicRecommendationVM.stopPlayback()
+        }
+        .navigationBarBackButtonHidden()
+        .enableSwipeBack()
+        .toolbar {
+            CustomBackButton {
+                musicRecommendationVM.recommendedTrack = nil
+                navigationManager.pop()
+            }
         }
     }
 }

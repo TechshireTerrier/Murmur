@@ -22,12 +22,13 @@ struct StoryListCard: View {
 
             // 감정 태그
             HStack {
-                ForEach(story.emotions, id: \.self) { emotion in
-                    Text(emotion)
-                        .modifier(EmotionLabelModifier())
-                        .padding(.trailing, 4) // 태그 간격 조정
-                        .accessibilityLabel("추출된 감정: \(emotion)")
-                }
+//                ForEach(story.recommendedSongAuthor, id: \.self) { emotion in
+//                    Text(emotion)
+//                        .modifier(EmotionLabelModifier())
+//                        .padding(.trailing, 4) // 태그 간격 조정
+//                        .accessibilityLabel("추출된 감정: \(emotion)")
+//                }
+                Text("이거 뭐냐")
 
                 Spacer()
             }
@@ -78,7 +79,6 @@ struct StoryListCard: View {
 #Preview {
     StoryListCard(story: Story(
         createdAt: Date().addingTimeInterval(-86400 * 1), // 1일 전
-        emotions: ["sadness", "longing"],
         content: "창밖으로 비가 추적추적 내리네요. 이런 날에는 약속도 다 취소하고 집에서 뒹굴거리는 게 최고인 것 같아요. 따뜻한 커피 한 잔 내려서 창가에 앉아 빗소리를 듣고 있으니 마음이 차분해져요. 이 분위기를 더 깊게 만들어 줄 감성적인 연주곡이나 노래가 있다면 알려주세요.",
         recommendedSongAuthor: "Mark Ronson",
         recommendedSongTitle: "Uptown Funk (feat. Bruno Mars)"
