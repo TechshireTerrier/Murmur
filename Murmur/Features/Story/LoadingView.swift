@@ -28,6 +28,7 @@ struct LoadingView: View {
                     .accessibilityLabel("사연에 딱 맞는 곡을 고르는 중이에요")
                     .accessibilityAddTraits(.isStaticText)
             }
+            .navigationBarBackButtonHidden()
             .onAppear {
                 Task {
                     // TODO: 예시) 검색어를 "Happy"로 지정, 실제로는 원하는 검색어로 변경

@@ -14,6 +14,7 @@ struct StoryListCard: View {
         VStack {
             // 생성일
             Text(story.createdAt.toFormattedString())
+                .accessibilityLabel("\(story.createdAt.toFormattedString())")
                 .font(.PretendardTitle3Bold)
                 .foregroundStyle(.text07)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -25,6 +26,7 @@ struct StoryListCard: View {
                     Text(emotion)
                         .modifier(EmotionLabelModifier())
                         .padding(.trailing, 4) // 태그 간격 조정
+                        .accessibilityLabel("추출된 감정: \(emotion)")
                 }
 
                 Spacer()
@@ -33,6 +35,7 @@ struct StoryListCard: View {
 
             // 사연 내용
             Text(story.content)
+                .accessibilityLabel("사연 내용: \(story.content)")
                 .font(.PretendardBody)
                 .foregroundStyle(.text07)
                 .lineLimit(3) // 내용을 최대 3줄까지 표시
@@ -52,6 +55,7 @@ struct StoryListCard: View {
                     rightFade: 16,
                     startDelay: 1
                 )
+                .accessibilityLabel("추천곡 \(story.recommendedSongAuthor)의 \(story.recommendedSongTitle)")
 //                    Text("\(story.recommendedSongAuthor) -")
 //                        .font(.PretendardCallout)
 //                        .foregroundStyle(.text07)
@@ -61,7 +65,6 @@ struct StoryListCard: View {
 //                        .lineLimit(1)
                 Spacer()
             }
-
             .padding(12)
             .background(Color.gray200)
             .cornerRadius(50)

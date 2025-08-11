@@ -26,7 +26,7 @@ struct DailyEmotionView: View {
                 ForEach(0..<emotions.count, id: \.self) { index in
                     Text("\(emotions[index])")
                         .modifier(EmotionLabelModifier())
-                        .accessibilityLabel("추출된 감정")
+                        .accessibilityLabel("추출된 감정: \(emotions[index])")
                         .accessibilityAddTraits(.isStaticText)
                 }
             }

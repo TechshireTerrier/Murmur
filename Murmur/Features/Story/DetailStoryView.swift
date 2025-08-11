@@ -19,7 +19,9 @@ struct DetailStoryView: View {
                 }
                 DetailStoryButtonView()
             }
+            .frame(maxWidth: .infinity)
         }
+        .navigationBarBackButtonHidden()
         .onDisappear {
             musicRecommendationVM.stopPlayback()
         }
