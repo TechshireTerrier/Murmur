@@ -32,7 +32,7 @@ class RadioSessionManager {
         self.ttsService = ttsService
     }
     
-    func generateScript(from story: UserStory) -> RadioScript {
+    func generateScript(from story: Story) -> RadioScript {
         return radioService.generateScript(from: story)
     }
     

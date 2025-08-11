@@ -5,8 +5,8 @@
 //  Created by 김현기 on 6/24/25.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @main
 struct MurmurApp: App {
@@ -29,6 +29,6 @@ struct MurmurApp: App {
                 await musicRecommendationVM.requestMusicAuthorization()
             }
         }
-        .modelContainer(for: [Story.self, UserStory.self])
+        .modelContainer(for: [Story.self, Story.self])
     }
 }
