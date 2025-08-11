@@ -20,14 +20,12 @@
 		144960752E294249003184F0 /* RecommendSongTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144960742E294249003184F0 /* RecommendSongTestView.swift */; };
 		144BF4FA2E2D5F4600B34FE8 /* LongButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144BF4F92E2D5F4600B34FE8 /* LongButtonModifier.swift */; };
 		144BF4FB2E2D5F4600B34FE8 /* EmotionLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144BF4F82E2D5F4600B34FE8 /* EmotionLabelModifier.swift */; };
-		144BF4FF2E2D65F800B34FE8 /* RadioControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144BF4FC2E2D65F800B34FE8 /* RadioControlButton.swift */; };
 		144BF5002E2D65F800B34FE8 /* RadioSubtitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144BF4FD2E2D65F800B34FE8 /* RadioSubtitleView.swift */; };
 		145A13502E19544600FE8EDF /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A134F2E19544600FE8EDF /* NavigationManager.swift */; };
 		145A13542E1957DA00FE8EDF /* RadioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13512E1957DA00FE8EDF /* RadioService.swift */; };
 		145A13552E1957DA00FE8EDF /* RadioServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13522E1957DA00FE8EDF /* RadioServiceImpl.swift */; };
 		145A135A2E1957DC00FE8EDF /* RadioTestMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13562E1957DC00FE8EDF /* RadioTestMockData.swift */; };
-		145A135B2E1957DC00FE8EDF /* RadioTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13572E1957DC00FE8EDF /* RadioTestView.swift */; };
-		145A135C2E1957DC00FE8EDF /* RadioTestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13582E1957DC00FE8EDF /* RadioTestViewModel.swift */; };
+		145A135C2E1957DC00FE8EDF /* RadioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13582E1957DC00FE8EDF /* RadioViewModel.swift */; };
 		145A13602E195A5100FE8EDF /* DestinationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A135F2E195A4D00FE8EDF /* DestinationType.swift */; };
 		145A13622E195A6E00FE8EDF /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13612E195A6E00FE8EDF /* ViewRouter.swift */; };
 		145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13642E19643900FE8EDF /* SwipeBack.swift */; };
@@ -60,6 +58,8 @@
 		AAA596502E118E7A00923793 /* FailAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5964F2E118E7A00923793 /* FailAlertView.swift */; };
 		AAA596522E118EA300923793 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596512E118EA300923793 /* WriteViewModel.swift */; };
 		AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596532E1190CB00923793 /* WriteMurmurButton.swift */; };
+		D1AA6BE32E48735D000E7198 /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AA6BE22E48734E000E7198 /* RadioView.swift */; };
+		D1AA6BE72E489761000E7198 /* DXYeonghwaJamak2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1AA6BE62E489761000E7198 /* DXYeonghwaJamak2-ExtraBold.ttf */; };
 		D1B9A9A72E11290800B7BAA0 /* UserStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B9A9A62E11290800B7BAA0 /* UserStory.swift */; };
 		F5964E4E2E228F2D00C8C507 /* SubtitleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */; };
 		F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */; };
@@ -81,14 +81,12 @@
 		144960742E294249003184F0 /* RecommendSongTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendSongTestView.swift; sourceTree = "<group>"; };
 		144BF4F82E2D5F4600B34FE8 /* EmotionLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionLabelModifier.swift; sourceTree = "<group>"; };
 		144BF4F92E2D5F4600B34FE8 /* LongButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButtonModifier.swift; sourceTree = "<group>"; };
-		144BF4FC2E2D65F800B34FE8 /* RadioControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioControlButton.swift; sourceTree = "<group>"; };
 		144BF4FD2E2D65F800B34FE8 /* RadioSubtitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSubtitleView.swift; sourceTree = "<group>"; };
 		145A134F2E19544600FE8EDF /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		145A13512E1957DA00FE8EDF /* RadioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioService.swift; sourceTree = "<group>"; };
 		145A13522E1957DA00FE8EDF /* RadioServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioServiceImpl.swift; sourceTree = "<group>"; };
 		145A13562E1957DC00FE8EDF /* RadioTestMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTestMockData.swift; sourceTree = "<group>"; };
-		145A13572E1957DC00FE8EDF /* RadioTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTestView.swift; sourceTree = "<group>"; };
-		145A13582E1957DC00FE8EDF /* RadioTestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTestViewModel.swift; sourceTree = "<group>"; };
+		145A13582E1957DC00FE8EDF /* RadioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewModel.swift; sourceTree = "<group>"; };
 		145A135F2E195A4D00FE8EDF /* DestinationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationType.swift; sourceTree = "<group>"; };
 		145A13612E195A6E00FE8EDF /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		145A13642E19643900FE8EDF /* SwipeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBack.swift; sourceTree = "<group>"; };
@@ -122,6 +120,8 @@
 		AAA5964F2E118E7A00923793 /* FailAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAlertView.swift; sourceTree = "<group>"; };
 		AAA596512E118EA300923793 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
 		AAA596532E1190CB00923793 /* WriteMurmurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteMurmurButton.swift; sourceTree = "<group>"; };
+		D1AA6BE22E48734E000E7198 /* RadioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
+		D1AA6BE62E489761000E7198 /* DXYeonghwaJamak2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DXYeonghwaJamak2-ExtraBold.ttf"; sourceTree = "<group>"; };
 		D1B9A9A62E11290800B7BAA0 /* UserStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStory.swift; sourceTree = "<group>"; };
 		F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSServiceImpl.swift; sourceTree = "<group>"; };
@@ -177,15 +177,6 @@
 			path = Murmur;
 			sourceTree = "<group>";
 		};
-		144BF4FE2E2D65F800B34FE8 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				144BF4FC2E2D65F800B34FE8 /* RadioControlButton.swift */,
-				144BF4FD2E2D65F800B34FE8 /* RadioSubtitleView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		145A134E2E19543200FE8EDF /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,8 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				145A13562E1957DC00FE8EDF /* RadioTestMockData.swift */,
-				145A13572E1957DC00FE8EDF /* RadioTestView.swift */,
-				145A13582E1957DC00FE8EDF /* RadioTestViewModel.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -231,6 +220,7 @@
 		1488E4CC2E0AC8D400988B12 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D1AA6BE62E489761000E7198 /* DXYeonghwaJamak2-ExtraBold.ttf */,
 				1488E4D32E0AEF3F00988B12 /* Pretendard-Black.otf */,
 				1488E4D42E0AEF3F00988B12 /* Pretendard-Bold.otf */,
 				1488E4D52E0AEF3F00988B12 /* Pretendard-ExtraBold.otf */,
@@ -323,9 +313,11 @@
 		1488E4EC2E0AF48600988B12 /* Radio */ = {
 			isa = PBXGroup;
 			children = (
-				144BF4FE2E2D65F800B34FE8 /* Components */,
 				145A13532E1957DA00FE8EDF /* Services */,
 				145A13592E1957DC00FE8EDF /* Tests */,
+				145A13582E1957DC00FE8EDF /* RadioViewModel.swift */,
+				D1AA6BE22E48734E000E7198 /* RadioView.swift */,
+				144BF4FD2E2D65F800B34FE8 /* RadioSubtitleView.swift */,
 			);
 			path = Radio;
 			sourceTree = "<group>";
@@ -430,6 +422,7 @@
 				1488E4E42E0AEF3F00988B12 /* Pretendard-SemiBold.otf in Resources */,
 				14363FDD2E0A9EB80030A623 /* Preview Assets.xcassets in Resources */,
 				14363FDE2E0A9EB80030A623 /* Assets.xcassets in Resources */,
+				D1AA6BE72E489761000E7198 /* DXYeonghwaJamak2-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,14 +445,14 @@
 				144BF4FA2E2D5F4600B34FE8 /* LongButtonModifier.swift in Sources */,
 				144BF4FB2E2D5F4600B34FE8 /* EmotionLabelModifier.swift in Sources */,
 				14E6F55A2E2D771B00601AB6 /* MusicRecommendationViewModel.swift in Sources */,
+				D1AA6BE32E48735D000E7198 /* RadioView.swift in Sources */,
 				06B93E6F2E24EBF0009AA80D /* DetailStoryButtonView.swift in Sources */,
 				14EBA5F52E0FB7E800314128 /* MurmurButton.swift in Sources */,
 				AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
 				145A13622E195A6E00FE8EDF /* ViewRouter.swift in Sources */,
 				145A135A2E1957DC00FE8EDF /* RadioTestMockData.swift in Sources */,
-				145A135B2E1957DC00FE8EDF /* RadioTestView.swift in Sources */,
-				145A135C2E1957DC00FE8EDF /* RadioTestViewModel.swift in Sources */,
+				145A135C2E1957DC00FE8EDF /* RadioViewModel.swift in Sources */,
 				145A13542E1957DA00FE8EDF /* RadioService.swift in Sources */,
 				145A13602E195A5100FE8EDF /* DestinationType.swift in Sources */,
 				F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */,
@@ -480,7 +473,6 @@
 				1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */,
 				06EFFDAF2E111627000F1612 /* StoryMusicView.swift in Sources */,
 				1488E4F02E0AF9A600988B12 /* TempModel.swift in Sources */,
-				144BF4FF2E2D65F800B34FE8 /* RadioControlButton.swift in Sources */,
 				144BF5002E2D65F800B34FE8 /* RadioSubtitleView.swift in Sources */,
 				145A13672E1965C100FE8EDF /* CustomBackButton.swift in Sources */,
 				F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */,

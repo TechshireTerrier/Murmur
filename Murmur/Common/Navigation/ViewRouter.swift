@@ -29,7 +29,7 @@ func ViewRouter(for destination: DestinationType) -> some View {
         EmptyView()
     case .radio:
         // TODO: - 라디오듣기 뷰 구현
-        RadioTestView()
+        RadioView()
     case .loading:
         LoadingView()
     }
