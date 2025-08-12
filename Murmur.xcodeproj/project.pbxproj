@@ -30,6 +30,7 @@
 		145A13622E195A6E00FE8EDF /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13612E195A6E00FE8EDF /* ViewRouter.swift */; };
 		145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13642E19643900FE8EDF /* SwipeBack.swift */; };
 		145A13672E1965C100FE8EDF /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13662E1965C100FE8EDF /* CustomBackButton.swift */; };
+		147D0D162E4B0FFD00503682 /* SentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 147D0D142E4B0FFD00503682 /* SentimentClassifier.mlmodel */; };
 		1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */; };
 		1488E4DC2E0AEF3F00988B12 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D32E0AEF3F00988B12 /* Pretendard-Black.otf */; };
 		1488E4DD2E0AEF3F00988B12 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D72E0AEF3F00988B12 /* Pretendard-Light.otf */; };
@@ -93,6 +94,7 @@
 		145A13612E195A6E00FE8EDF /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		145A13642E19643900FE8EDF /* SwipeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBack.swift; sourceTree = "<group>"; };
 		145A13662E1965C100FE8EDF /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		147D0D142E4B0FFD00503682 /* SentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		1488E4D32E0AEF3F00988B12 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		1488E4D42E0AEF3F00988B12 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -212,11 +214,20 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		147D0D152E4B0FFD00503682 /* MLModel */ = {
+			isa = PBXGroup;
+			children = (
+				147D0D142E4B0FFD00503682 /* SentimentClassifier.mlmodel */,
+			);
+			path = MLModel;
+			sourceTree = "<group>";
+		};
 		1488E4C52E0AC88A00988B12 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				1488E4CC2E0AC8D400988B12 /* Fonts */,
 				14363FD72E0A9EB80030A623 /* Assets.xcassets */,
+				147D0D152E4B0FFD00503682 /* MLModel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -486,6 +497,7 @@
 				145A13672E1965C100FE8EDF /* CustomBackButton.swift in Sources */,
 				F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */,
 				14EBA5FD2E0FCB3500314128 /* Song.swift in Sources */,
+				147D0D162E4B0FFD00503682 /* SentimentClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
