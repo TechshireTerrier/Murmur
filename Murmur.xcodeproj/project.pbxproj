@@ -30,6 +30,7 @@
 		145A13622E195A6E00FE8EDF /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13612E195A6E00FE8EDF /* ViewRouter.swift */; };
 		145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13642E19643900FE8EDF /* SwipeBack.swift */; };
 		145A13672E1965C100FE8EDF /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13662E1965C100FE8EDF /* CustomBackButton.swift */; };
+		147D0D162E4B0FFD00503682 /* SentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 147D0D142E4B0FFD00503682 /* SentimentClassifier.mlmodel */; };
 		1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */; };
 		1488E4DC2E0AEF3F00988B12 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D32E0AEF3F00988B12 /* Pretendard-Black.otf */; };
 		1488E4DD2E0AEF3F00988B12 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D72E0AEF3F00988B12 /* Pretendard-Light.otf */; };
@@ -63,6 +64,9 @@
 		F5964E4E2E228F2D00C8C507 /* SubtitleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */; };
 		F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */; };
 		F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */; };
+		F5DFAAEA2E4B0C3900EC34FB /* TotalStoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */; };
+		F5DFAAEC2E4B0C5E00EC34FB /* DetailStoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFAAEB2E4B0C5E00EC34FB /* DetailStoryViewModel.swift */; };
+		F5DFAAEE2E4B0C9200EC34FB /* EmotionAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFAAED2E4B0C9200EC34FB /* EmotionAnalysisService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +94,7 @@
 		145A13612E195A6E00FE8EDF /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		145A13642E19643900FE8EDF /* SwipeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBack.swift; sourceTree = "<group>"; };
 		145A13662E1965C100FE8EDF /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		147D0D142E4B0FFD00503682 /* SentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		1488E4D32E0AEF3F00988B12 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		1488E4D42E0AEF3F00988B12 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -124,6 +129,9 @@
 		F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSessionManager.swift; sourceTree = "<group>"; };
+		F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStoryListViewModel.swift; sourceTree = "<group>"; };
+		F5DFAAEB2E4B0C5E00EC34FB /* DetailStoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoryViewModel.swift; sourceTree = "<group>"; };
+		F5DFAAED2E4B0C9200EC34FB /* EmotionAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionAnalysisService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,11 +214,20 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		147D0D152E4B0FFD00503682 /* MLModel */ = {
+			isa = PBXGroup;
+			children = (
+				147D0D142E4B0FFD00503682 /* SentimentClassifier.mlmodel */,
+			);
+			path = MLModel;
+			sourceTree = "<group>";
+		};
 		1488E4C52E0AC88A00988B12 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				1488E4CC2E0AC8D400988B12 /* Fonts */,
 				14363FD72E0A9EB80030A623 /* Assets.xcassets */,
+				147D0D152E4B0FFD00503682 /* MLModel */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -299,8 +316,11 @@
 			children = (
 				14EBA5FE2E0FD85E00314128 /* Components */,
 				14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */,
+				F5DFAAED2E4B0C9200EC34FB /* EmotionAnalysisService.swift */,
 				14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */,
+				F5DFAAEB2E4B0C5E00EC34FB /* DetailStoryViewModel.swift */,
 				0667FC562E1C0E1A006F2CE9 /* LoadingView.swift */,
+				F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */,
 				1449606A2E293C35003184F0 /* DetailStoryView.swift */,
 				14E6F5592E2D771B00601AB6 /* MusicRecommendationViewModel.swift */,
 			);
@@ -448,14 +468,17 @@
 				AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
 				145A13622E195A6E00FE8EDF /* ViewRouter.swift in Sources */,
+				F5DFAAEE2E4B0C9200EC34FB /* EmotionAnalysisService.swift in Sources */,
 				145A135A2E1957DC00FE8EDF /* RadioTestMockData.swift in Sources */,
 				145A135C2E1957DC00FE8EDF /* RadioViewModel.swift in Sources */,
 				145A13542E1957DA00FE8EDF /* RadioService.swift in Sources */,
+				F5DFAAEA2E4B0C3900EC34FB /* TotalStoryListViewModel.swift in Sources */,
 				145A13602E195A5100FE8EDF /* DestinationType.swift in Sources */,
 				F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */,
 				145A13552E1957DA00FE8EDF /* RadioServiceImpl.swift in Sources */,
 				D1B9A9A72E11290800B7BAA0 /* Story.swift in Sources */,
 				145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */,
+				F5DFAAEC2E4B0C5E00EC34FB /* DetailStoryViewModel.swift in Sources */,
 				14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */,
 				AA7E0E912E2546170037DFED /* CheckSTTView.swift in Sources */,
 				14EBA5F72E0FC3F200314128 /* TotalStoryListView.swift in Sources */,
@@ -474,6 +497,7 @@
 				145A13672E1965C100FE8EDF /* CustomBackButton.swift in Sources */,
 				F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */,
 				14EBA5FD2E0FCB3500314128 /* Song.swift in Sources */,
+				147D0D162E4B0FFD00503682 /* SentimentClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

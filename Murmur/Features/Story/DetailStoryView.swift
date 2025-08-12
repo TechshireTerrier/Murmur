@@ -1,5 +1,5 @@
 //
-//  SongView.swift
+//  DetailStoryView.swift
 //  Murmur
 //
 //  Created by gabi on 6/28/25.
@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct DetailStoryView: View {
+    @StateObject private var viewModel: DetailStoryViewModel
     @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
     @EnvironmentObject private var navigationManager: NavigationManager
+
+    init(story: Story) {
+        _viewModel = StateObject(wrappedValue: DetailStoryViewModel(story: story))
+    }
 
     var body: some View {
         ScrollView {
             VStack {
                 VStack(spacing: 20) {
-                    SongStoryView()
-                    DailyEmotionView()
+                    SongStoryView(story: viewModel.story)
+                    DailyEmotionView(emotions: viewModel.emotions, isLoading: viewModel.isLoadingEmotions)
                     StoryMusicView(musicRecommendationVM: musicRecommendationVM)
                 }
                 DetailStoryButtonView()
@@ -24,20 +29,19 @@ struct DetailStoryView: View {
             .frame(maxWidth: .infinity)
         }
         .navigationBarBackButtonHidden()
-        .onDisappear {
-            musicRecommendationVM.stopPlayback()
-        }
-        .navigationBarBackButtonHidden()
         .enableSwipeBack()
         .toolbar {
             CustomBackButton {
-                musicRecommendationVM.recommendedTrack = nil
                 navigationManager.pop()
             }
+        }
+        .onDisappear {
+            musicRecommendationVM.stopPlayback()
         }
     }
 }
 
 #Preview {
-    DetailStoryView()
+    DetailStoryView(story: MockData.sampleStory)
+        .environmentObject(MusicRecommendationViewModel())
 }

@@ -23,15 +23,15 @@ func ViewRouter(for destination: DestinationType, modelContext: ModelContext) ->
         EmptyView()
     case .totalStoryList:
         TotalStoryListView(modelContext: modelContext)
-    case .detailStory:
-        DetailStoryView()
+    case .detailStory(let story):
+        DetailStoryView(story: story)
     case .modifyStory:
         // TODO: - 사연 수정 뷰 구현
         EmptyView()
     case .radio:
         // TODO: - 라디오듣기 뷰 구현
         RadioView()
-    case .loading:
-        LoadingView()
+    case .loading(let story):
+        LoadingView(story: story)
     }
 }

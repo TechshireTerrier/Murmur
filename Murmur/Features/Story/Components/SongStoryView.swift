@@ -8,47 +8,46 @@
 import SwiftUI
 
 struct SongStoryView: View {
-    @State private var todayStory: String = "I'd run the risk of losing everything Sell all my things, become nomadic I'd run the risk, and just in case, I might Sell all my things and become the night."
+    let story: Story
+    
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var screenHeight: CGFloat { UIScreen.main.bounds.height }
     
     var body: some View {
-            VStack(alignment: .leading) {
+        VStack(alignment: .leading) {
+            HStack {
+                Text("오늘의 사연")
+                    .font(.PretendardTitle1Bold)
+                    .accessibilityLabel("오늘의 사연")
+                    .accessibilityAddTraits(.isHeader)
                 
-                HStack {
-                    Text("오늘의 사연")
-                        .font(.PretendardTitle1Bold)
-                        .accessibilityLabel("오늘의 사연")
-                        .accessibilityAddTraits(.isHeader)
-                    
-                    Spacer()
-                    
-                    Button("수정하기") {
-                        print("수정하기 버튼 눌림")
-                    }
-                    .font(.PretendardBody)
-                    .foregroundStyle(Color.text04)
-                    .accessibilityLabel("수정하기")
-                    .accessibilityAddTraits(.isButton)
-                }
-                .frame(width: SongStoryView.screenWidth * 0.9)
-                .padding(.top, SongStoryView.screenWidth * 0.1)
-
+                Spacer()
                 
-                    ScrollView {
-                        Text(todayStory)
-                            .foregroundStyle(Color.gray900)
-                            .padding(SongStoryView.screenWidth * 0.07)
-                            .accessibilityLabel("사연 내용")
-                            .accessibilityAddTraits(.isStaticText)
-                    }
-                    .frame(width: SongStoryView.screenWidth * 0.9, height: SongStoryView.screenHeight * 0.5, alignment: .top)
-                    .background(Color.gray50)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                Button("수정하기") {
+                    print("수정하기 버튼 눌림")
                 }
+                .font(.PretendardBody)
+                .foregroundStyle(Color.text04)
+                .accessibilityLabel("수정하기")
+                .accessibilityAddTraits(.isButton)
+            }
+            .frame(width: SongStoryView.screenWidth * 0.9)
+            .padding(.top, SongStoryView.screenWidth * 0.1)
+            
+            ScrollView {
+                Text(story.content)
+                    .foregroundStyle(Color.gray900)
+                    .padding(SongStoryView.screenWidth * 0.07)
+                    .accessibilityLabel("사연 내용")
+                    .accessibilityAddTraits(.isStaticText)
+            }
+            .frame(width: SongStoryView.screenWidth * 0.9, height: SongStoryView.screenHeight * 0.5, alignment: .top)
+            .background(Color.gray50)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+        }
     }
 }
 
 #Preview {
-    SongStoryView()
+    SongStoryView(story: MockData.sampleStory)
 }
