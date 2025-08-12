@@ -1,7 +1,7 @@
 import AVFoundation
 import Speech
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct WriteView: View {
     let modelContext: ModelContext
@@ -15,7 +15,7 @@ struct WriteView: View {
 
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
-        self._viewModel = StateObject(wrappedValue: WriteViewModel(modelContext: modelContext))
+        _viewModel = StateObject(wrappedValue: WriteViewModel(modelContext: modelContext))
     }
 
     var body: some View {
@@ -94,7 +94,7 @@ struct WriteView: View {
                     } else {
                         // 사연 작성 완료 처리
                         isTextEditorFocused = false
-                        
+
                         // Story 생성 시 modelContext 사용
                         let userStory = Story(
                             content: userInput,
@@ -102,10 +102,10 @@ struct WriteView: View {
                             recommendedSongAuthor: "",
                             recommendedSongTitle: ""
                         )
-                        
+
                         // LoadingView로 이동하면서 story 전달
                         navigationManager.push(to: .loading(story: userStory))
-                        
+
                         userInput = ""
                     }
                 }
@@ -119,6 +119,13 @@ struct WriteView: View {
 
             // 실패 알림 뷰
             FailAlertView(isPresented: $viewModel.showFailAlert)
+        }
+        .navigationBarBackButtonHidden()
+        .enableSwipeBack()
+        .toolbar {
+            CustomBackButton {
+                navigationManager.pop()
+            }
         }
         .onAppear {
             audioRecorder.userInputBinding = $userInput
@@ -138,7 +145,7 @@ struct WriteView: View {
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Story.self, configurations: config)
-    
+
     return WriteView(modelContext: container.mainContext)
         .preferredColorScheme(.dark)
 }

@@ -10,11 +10,12 @@ import SwiftUI
 struct DetailStoryView: View {
     @StateObject private var viewModel: DetailStoryViewModel
     @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
-    
+    @EnvironmentObject private var navigationManager: NavigationManager
+
     init(story: Story) {
-        self._viewModel = StateObject(wrappedValue: DetailStoryViewModel(story: story))
+        _viewModel = StateObject(wrappedValue: DetailStoryViewModel(story: story))
     }
-    
+
     var body: some View {
         ScrollView {
             VStack {
@@ -28,6 +29,12 @@ struct DetailStoryView: View {
             .frame(maxWidth: .infinity)
         }
         .navigationBarBackButtonHidden()
+        .enableSwipeBack()
+        .toolbar {
+            CustomBackButton {
+                navigationManager.pop()
+            }
+        }
         .onDisappear {
             musicRecommendationVM.stopPlayback()
         }
