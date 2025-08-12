@@ -10,6 +10,8 @@ import SwiftUI
 struct LoadingView: View {
     @EnvironmentObject private var navigationManager: NavigationManager
     @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
+    
+    let story: Story
 
     var body: some View {
         if musicRecommendationVM.isMusicAuthorized {
@@ -31,18 +33,16 @@ struct LoadingView: View {
             .navigationBarBackButtonHidden()
             .onAppear {
                 Task {
-                    // TODO: 예시) 검색어를 "Happy"로 지정, 실제로는 원하는 검색어로 변경
                     await musicRecommendationVM.searchAndRecommendSong(searchTerm: "Happy")
                 }
             }
             .onChange(of: musicRecommendationVM.recommendedTrack) { newValue in
                 if newValue != nil {
-//                    navigationManager.push(to: .detailStory)
-                    navigationManager.replace(to: .detailStory)
+                    // story를 DetailStoryView에 전달
+                    navigationManager.push(to: .detailStory(story: story))
                 }
             }
         } else {
-            // 권한이 없을 때 보여줄 뷰
             Text("음악 추천을 받으려면 Apple Music 접근 권한이 필요합니다.")
             Button("권한 요청하기") {
                 Task {
@@ -54,5 +54,5 @@ struct LoadingView: View {
 }
 
 #Preview {
-    LoadingView()
+    LoadingView(story: MockData.sampleStory)
 }
