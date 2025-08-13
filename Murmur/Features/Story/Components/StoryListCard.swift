@@ -23,7 +23,7 @@ struct StoryListCard: View {
             // 감정 태그
             HStack {
                 if !story.emotions.isEmpty {
-                    ForEach(story.emotions.prefix(3), id: \.self) { emotion in
+                    ForEach(story.emotions.prefix(4), id: \.self) { emotion in
                         Text(emotion)
                             .modifier(DetailEmotionLabelModifier())
                             .padding(.trailing, 4)
