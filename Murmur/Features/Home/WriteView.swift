@@ -9,7 +9,8 @@ struct WriteView: View {
     @StateObject private var audioRecorder = AudioRecorder()
     @State private var userInput: String = ""
     @State private var keyboardHeight: CGFloat = 0
-    private let placeholder = "오늘 어떤 일이 있었나요?\n하루를 떠올리며 입력해보세요"
+    private let placeholder1 = "오늘 어떤 일이 있었나요?"
+    private let placeholder2 = "하루를 떠올리며 입력해보세요"
     @FocusState private var isTextEditorFocused: Bool
     @EnvironmentObject private var navigationManager: NavigationManager
 
@@ -64,6 +65,7 @@ struct WriteView: View {
                     RoundedRectangle(cornerRadius: 15)
                         .fill(Color.text01)
                     TextEditor(text: $userInput)
+                        .font(.PretendardBody)
                         .padding(16)
                         .background(Color.clear)
                         .cornerRadius(15)
@@ -71,10 +73,13 @@ struct WriteView: View {
                         .scrollContentBackground(.hidden)
                         .focused($isTextEditorFocused)
                     if userInput.isEmpty {
-                        Text(placeholder)
-                            .foregroundColor(Color.Gray700)
-                            .padding(20)
-                            .font(.PretendardBody)
+                        VStack {
+                            Text(placeholder1) + Text("\n") + Text(placeholder2)
+                        }
+                        .foregroundColor(Color.Gray700)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 22)
+                        .font(.PretendardBody)
                     }
                 }
                 .accessibilityLabel(isTextEditorFocused ? "사연 입력중" : "사연 입력란")

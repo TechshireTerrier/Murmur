@@ -10,6 +10,8 @@ import SwiftUI
 
 struct StoryMusicView: View {
     let musicRecommendationVM: MusicRecommendationViewModel
+    
+    @State var isPlaying: Bool = false
 
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var widthSize: CGFloat { screenWidth * 0.9 }
@@ -59,12 +61,24 @@ struct StoryMusicView: View {
 
                 Button {
                     print("재생 버튼 눌림")
-                    musicRecommendationVM.playPreview()
+                    isPlaying.toggle()
+                    if isPlaying {
+                        musicRecommendationVM.playPreview()
+                    } else {
+                        musicRecommendationVM.stopPlayback()
+                    }
                 } label: {
-                    Image(systemName: "play.circle.fill")
-                        .resizable()
-                        .frame(width: StoryMusicView.screenWidth * 0.1, height: StoryMusicView.screenWidth * 0.1)
-                        .foregroundStyle(Color.text07)
+                    if isPlaying {
+                        Image(systemName: "pause.circle.fill")
+                            .resizable()
+                            .frame(width: StoryMusicView.screenWidth * 0.1, height: StoryMusicView.screenWidth * 0.1)
+                            .foregroundStyle(Color.text07)
+                    } else {
+                        Image(systemName: "play.circle.fill")
+                            .resizable()
+                            .frame(width: StoryMusicView.screenWidth * 0.1, height: StoryMusicView.screenWidth * 0.1)
+                            .foregroundStyle(Color.text07)
+                    }
                 }
             }
             .padding(12)
