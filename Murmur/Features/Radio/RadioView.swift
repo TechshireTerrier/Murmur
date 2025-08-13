@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct RadioView: View {
-    @StateObject private var viewModel = RadioViewModel()
+    @StateObject private var viewModel: RadioViewModel
     @EnvironmentObject private var navigationManager: NavigationManager
+    @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
+    
+    init() {
+        // 기본 MusicRecommendationViewModel로 초기화
+        self._viewModel = StateObject(wrappedValue: RadioViewModel(
+            musicRecommendationViewModel: MusicRecommendationViewModel()
+        ))
+    }
 
     var body: some View {
         ZStack {
@@ -25,19 +33,6 @@ struct RadioView: View {
                 RadioSubtitleView(subtitle: viewModel.currentSubtitle)
 
                 Spacer()
-
-                // 작성 완료 버튼
-                Button {
-                    navigationManager.popToRoot()
-                } label: {
-                    Text("홈으로 이동")
-                        .font(.PretendardBodySemiBold)
-                        .foregroundColor(Color.Gray900)
-                        .frame(maxWidth: .infinity, minHeight: 52)
-                        .background(Color.PointMint)
-                        .cornerRadius(15)
-                }
-                .padding(.horizontal, 32)
             }
         }
         .navigationBarBackButtonHidden()
@@ -48,10 +43,21 @@ struct RadioView: View {
             }
         }
         .onAppear {
+            print(" RadioView onAppear")
+            print("🔍 musicRecommendationVM.recommendedTrack: \(String(describing: musicRecommendationVM.recommendedTrack))")
+            
+            // EnvironmentObject에서 전달받은 MusicRecommendationViewModel 설정
+            viewModel.setMusicViewModel(musicRecommendationVM)
             viewModel.startPlaying()
         }
         .onDisappear {
             viewModel.stopPlaying()
+        }
+        .onChange(of: viewModel.shouldNavigateToHome) { shouldNavigate in
+            if shouldNavigate {
+                print(" View에서 홈 이동 신호 감지! 홈으로 이동")
+                navigationManager.popToRoot()
+            }
         }
     }
 }
@@ -60,5 +66,6 @@ struct RadioView: View {
     NavigationView {
         RadioView()
             .environmentObject(NavigationManager())
+            .environmentObject(MusicRecommendationViewModel())
     }
 }
