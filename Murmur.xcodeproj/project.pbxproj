@@ -66,7 +66,6 @@
 		F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */; };
 		F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */; };
 		F5DFAAEA2E4B0C3900EC34FB /* TotalStoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */; };
-		F5DFAAEC2E4B0C5E00EC34FB /* DetailStoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFAAEB2E4B0C5E00EC34FB /* DetailStoryViewModel.swift */; };
 		F5DFAAEE2E4B0C9200EC34FB /* EmotionAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFAAED2E4B0C9200EC34FB /* EmotionAnalysisService.swift */; };
 /* End PBXBuildFile section */
 
@@ -132,7 +131,6 @@
 		F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSessionManager.swift; sourceTree = "<group>"; };
 		F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStoryListViewModel.swift; sourceTree = "<group>"; };
-		F5DFAAEB2E4B0C5E00EC34FB /* DetailStoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStoryViewModel.swift; sourceTree = "<group>"; };
 		F5DFAAED2E4B0C9200EC34FB /* EmotionAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionAnalysisService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,7 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */,
-				F5DFAAEB2E4B0C5E00EC34FB /* DetailStoryViewModel.swift */,
 				F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */,
 				14E6F5592E2D771B00601AB6 /* MusicRecommendationViewModel.swift */,
 			);
@@ -490,7 +487,6 @@
 				145A13552E1957DA00FE8EDF /* RadioServiceImpl.swift in Sources */,
 				D1B9A9A72E11290800B7BAA0 /* Story.swift in Sources */,
 				145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */,
-				F5DFAAEC2E4B0C5E00EC34FB /* DetailStoryViewModel.swift in Sources */,
 				14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */,
 				AA7E0E912E2546170037DFED /* CheckSTTView.swift in Sources */,
 				14EBA5F72E0FC3F200314128 /* TotalStoryListView.swift in Sources */,

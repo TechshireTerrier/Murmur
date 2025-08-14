@@ -39,6 +39,12 @@ struct LoadingView: View {
             .onAppear {
                 Task {
                     story.emotions = await EmotionAnalysisService().analyzeEmotions(from: story)
+                    guard let searchTerm = story.emotions.first else {
+                        // 감정이 없을 경우 기본 메시지 표시
+                        print("감정이 없습니다.")
+                        navigationManager.pop()
+                        return
+                    }
                     await musicRecommendationVM.searchAndRecommendSong(searchTerm: story.emotions[0])
                 }
             }
