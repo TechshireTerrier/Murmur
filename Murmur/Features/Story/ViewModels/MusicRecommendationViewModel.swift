@@ -56,6 +56,7 @@ class MusicRecommendationViewModel: ObservableObject {
             // 검색된 첫 번째 플레이리스트를 가져옴
             guard let foundPlaylist = response.playlists.first else {
                 print("검색 결과에 플레이리스트가 없습니다.")
+                await searchAndRecommendSong(searchTerm: "명동") // 기본 검색어로 다시 시도
                 return
             }
 
@@ -105,4 +106,3 @@ class MusicRecommendationViewModel: ObservableObject {
         print("플레이어를 정지했습니다.")
     }
 }
-

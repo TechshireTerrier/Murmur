@@ -216,6 +216,17 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		145D635E2E4D6FED009F23FD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */,
+				F5DFAAEB2E4B0C5E00EC34FB /* DetailStoryViewModel.swift */,
+				F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */,
+				14E6F5592E2D771B00601AB6 /* MusicRecommendationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		147D0D152E4B0FFD00503682 /* MLModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,15 +328,12 @@
 		1488E4EB2E0AF3ED00988B12 /* Story */ = {
 			isa = PBXGroup;
 			children = (
+				145D635E2E4D6FED009F23FD /* ViewModels */,
 				14EBA5FE2E0FD85E00314128 /* Components */,
-				14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */,
 				F5DFAAED2E4B0C9200EC34FB /* EmotionAnalysisService.swift */,
 				14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */,
-				F5DFAAEB2E4B0C5E00EC34FB /* DetailStoryViewModel.swift */,
 				0667FC562E1C0E1A006F2CE9 /* LoadingView.swift */,
-				F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */,
 				1449606A2E293C35003184F0 /* DetailStoryView.swift */,
-				14E6F5592E2D771B00601AB6 /* MusicRecommendationViewModel.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";

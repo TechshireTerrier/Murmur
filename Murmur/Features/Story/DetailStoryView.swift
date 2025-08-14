@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct DetailStoryView: View {
-    @StateObject private var viewModel: DetailStoryViewModel
+//    @StateObject private var viewModel: DetailStoryViewModel
     @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
     @EnvironmentObject private var navigationManager: NavigationManager
+    
+    let story: Story
 
     init(story: Story) {
-        _viewModel = StateObject(wrappedValue: DetailStoryViewModel(story: story))
+//        _viewModel = StateObject(wrappedValue: DetailStoryViewModel(story: story))
+        self.story = story
     }
 
     var body: some View {
         ScrollView {
             VStack {
                 VStack(spacing: 20) {
-                    SongStoryView(story: viewModel.story)
-                    DailyEmotionView(emotions: viewModel.emotions, isLoading: viewModel.isLoadingEmotions)
+                    SongStoryView(story: story)
+                    DailyEmotionView(emotions: story.emotions)
                     StoryMusicView(musicRecommendationVM: musicRecommendationVM)
                 }
                 DetailStoryButtonView()

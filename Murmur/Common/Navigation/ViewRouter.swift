@@ -4,12 +4,11 @@
 //
 //  Created by 김현기 on 7/5/25.
 //
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 @ViewBuilder
 func ViewRouter(for destination: DestinationType, modelContext: ModelContext) -> some View {
-
     switch destination {
     case .home:
         HomeView()
@@ -23,7 +22,7 @@ func ViewRouter(for destination: DestinationType, modelContext: ModelContext) ->
         EmptyView()
     case .totalStoryList:
         TotalStoryListView(modelContext: modelContext)
-    case .detailStory(let story):
+    case let .detailStory(story):
         DetailStoryView(story: story)
     case .modifyStory:
         // TODO: - 사연 수정 뷰 구현
@@ -31,7 +30,7 @@ func ViewRouter(for destination: DestinationType, modelContext: ModelContext) ->
     case .radio:
         // TODO: - 라디오듣기 뷰 구현
         RadioView()
-    case .loading(let story):
+    case let .loading(story):
         LoadingView(story: story)
     }
 }
