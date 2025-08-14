@@ -18,3 +18,17 @@ struct EmotionLabelModifier: ViewModifier {
             .cornerRadius(50)
     }
 }
+struct DetailEmotionLabelModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .padding(.vertical, 8)
+            .padding(.horizontal, 18)
+            .font(.PretendardBodyBold)
+            .foregroundStyle(Color.TextPrimary)
+            .overlay(
+                RoundedRectangle(cornerRadius: 50)
+                    .stroke(Color.Mint800, lineWidth: 1)
+            )
+            .background(Color.clear)
+    }
+}
