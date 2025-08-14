@@ -19,7 +19,7 @@ struct FailAlertView: View {
                 Color.gray900.opacity(0.4)
                     .edgesIgnoringSafeArea(.all)
                 
-                VStack(spacing: 12) {
+                VStack {
                     
                     // 알림 아이콘
                     Image("Warning")
@@ -27,7 +27,7 @@ struct FailAlertView: View {
                         .frame(width: 60, height: 60,alignment: .top)
                         .foregroundColor(Color.PointMint)
                         .accessibilityLabel("경고 사이렌")
-                        .padding(.top,12)
+                        .padding(.top, 12)
                     
                     // 메시지
                     Text("아직 사연이\n작성되지 않았어요")
@@ -35,6 +35,7 @@ struct FailAlertView: View {
                         .foregroundColor(Color.text06)
                         .font(.PretendardTitle3SemiBold)
                         .accessibilityLabel("아직 사연이\n작성되지 않았어요")
+                        .padding(.top, 8)
                     
                     // 확인 버튼
                     Button(action: {
@@ -51,7 +52,8 @@ struct FailAlertView: View {
                             .foregroundColor(Color.text07)
                             .cornerRadius(10)
                             .accessibilityLabel("확인")
-                            .padding(.vertical, 12)
+                            .padding(.top, 4)
+                            .padding(.bottom, 12)
                     }
                 }
                 .padding(.horizontal, 11)

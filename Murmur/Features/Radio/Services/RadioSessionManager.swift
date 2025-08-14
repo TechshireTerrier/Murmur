@@ -19,6 +19,7 @@ class RadioSessionManager {
     
     private var onSubtitleChangeCallback: ((String) -> Void)?
     private var onCompleteCallback: (() -> Void)?
+    private var onMusicPlayCallback: (() -> Void)?
     
     private var subtitleTimer: Timer?
     
@@ -40,7 +41,10 @@ class RadioSessionManager {
         return subtitleService.generateSegments(from: script)
     }
     
-    func play(segments: [SubtitleSegment], onSubtitleChange: @escaping (String) -> Void, complete: @escaping () -> Void) {
+    func play(segments: [SubtitleSegment],
+              onSubtitleChange: @escaping (String) -> Void,
+              complete: @escaping () -> Void,
+              onMusicPlay: @escaping () -> Void) {
         if isCurrentlyPlaying {
             stop()
         }
@@ -50,6 +54,7 @@ class RadioSessionManager {
         self.isCurrentlyPlaying = true
         self.onSubtitleChangeCallback = onSubtitleChange
         self.onCompleteCallback = complete
+        self.onMusicPlayCallback = onMusicPlay
         
         playCurrentSegment()
     }
@@ -67,6 +72,7 @@ class RadioSessionManager {
         
         onSubtitleChangeCallback = nil
         onCompleteCallback = nil
+        onMusicPlayCallback = nil
     }
     
     func getState() -> (isPlaying: Bool, currentSubtitle: String) {
@@ -79,8 +85,15 @@ class RadioSessionManager {
         guard currentIndex < segments.count else {
             isCurrentlyPlaying = false
             let completeCallback = onCompleteCallback
+            let musicPlayCallback = onMusicPlayCallback
+            
             onCompleteCallback = nil
             onSubtitleChangeCallback = nil
+            onMusicPlayCallback = nil
+            
+            // TTS 완료 시점에 음악 재생 콜백 호출
+            musicPlayCallback?()
+            
             completeCallback?()
             return
         }
