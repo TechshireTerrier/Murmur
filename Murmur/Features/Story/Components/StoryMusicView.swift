@@ -65,7 +65,7 @@ struct StoryMusicView: View {
                     }
                 } label: {
                     if musicRecommendationVM.isMusicPlaying {
-                        Image(systemName: "pause.circle.fill")
+                        Image(systemName: "stop.circle.fill")
                             .resizable()
                             .frame(width: StoryMusicView.screenWidth * 0.1, height: StoryMusicView.screenWidth * 0.1)
                             .foregroundStyle(Color.text07)
