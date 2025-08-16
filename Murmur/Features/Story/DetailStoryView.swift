@@ -26,7 +26,14 @@ struct DetailStoryView: View {
                     DailyEmotionView(emotions: viewModel.emotions, isLoading: viewModel.isLoadingEmotions)
                     StoryMusicView(musicRecommendationVM: musicRecommendationVM)
                 }
-                DetailStoryButtonView()
+                DetailStoryButtonView(
+                    onRadio: {
+                        navigationManager.push(to: .radio(story: viewModel.story))
+                    },
+                    onClose: {
+                        navigationManager.popToRoot()
+                    }
+                )
             }
             .frame(maxWidth: .infinity)
         }
@@ -39,7 +46,6 @@ struct DetailStoryView: View {
         }
         .onAppear {
             updateStoryWithRecommendedSong()
-            // ViewModel에 modelContext 설정
             viewModel.setModelContext(modelContext)
         }
         .onDisappear {
@@ -48,15 +54,10 @@ struct DetailStoryView: View {
     }
     
     private func updateStoryWithRecommendedSong() {
-        // 추천된 노래가 있고, Story에 아직 노래 정보가 없는 경우에만 업데이트
         if let recommendedTrack = musicRecommendationVM.recommendedTrack,
            viewModel.story.recommendedSongTitle.isEmpty {
-            
-            // Story 객체에 노래 정보 업데이트
             viewModel.story.recommendedSongTitle = recommendedTrack.title
             viewModel.story.recommendedSongAuthor = recommendedTrack.artistName
-            
-            // SwiftData에 변경사항 저장
             do {
                 try modelContext.save()
                 print("Story updated with song: \(recommendedTrack.title) by \(recommendedTrack.artistName)")
@@ -71,3 +72,4 @@ struct DetailStoryView: View {
     DetailStoryView(story: MockData.sampleStory)
         .environmentObject(MusicRecommendationViewModel())
 }
+
