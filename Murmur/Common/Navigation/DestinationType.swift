@@ -18,7 +18,7 @@ enum DestinationType: Hashable {
     case totalStoryList // 전체 사연 목록
     case detailStory(story: Story) // 사연 상세
     case modifyStory // 사연 수정
-    case radio // 라디오
+    case radio(story: Story) // 라디오
 
     // etc
     case loading(story: Story) // 로딩 화면

@@ -28,9 +28,9 @@ func ViewRouter(for destination: DestinationType, modelContext: ModelContext) ->
     case .modifyStory:
         // TODO: - 사연 수정 뷰 구현
         EmptyView()
-    case .radio:
+    case .radio(let story):
         // TODO: - 라디오듣기 뷰 구현
-        RadioView()
+        RadioView(story: story)
     case .loading(let story):
         LoadingView(story: story)
     }
