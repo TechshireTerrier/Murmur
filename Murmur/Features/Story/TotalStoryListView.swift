@@ -23,7 +23,11 @@ struct TotalStoryListView: View {
                 HStack {
                     Spacer()
 
-                    Button(action: {}) {
+                    Button(action: {
+                        if let randomStory = viewModel.getRandomStory() {
+                            navigationManager.push(to: .radio(story: randomStory))
+                        }
+                    }) {
                         Text("랜덤 사연 읽기")
                             .font(.PretendardBodyBold)
                             .foregroundStyle(.text07)
