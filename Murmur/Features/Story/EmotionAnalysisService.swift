@@ -23,24 +23,27 @@ final class EmotionAnalysisService: ObservableObject {
         loadModel()
     }
 
-    func analyzeEmotions(from story: Story) async -> [String] {
-        await MainActor.run { self.isLoadingEmotions = true }
-        print("🔍 Starting emotion analysis...")
-        let analyzedEmotions = analyzeEmotions(from: story.content)
-        let emotionLabels = analyzedEmotions.map { $0.label }
-        await MainActor.run { self.isLoadingEmotions = false }
-        print("✅ Emotion analysis completed: \(emotionLabels)")
-        return emotionLabels
-    }
+//
+//    func analyzeEmotions(from story: Story) async -> [String] {
+//        await MainActor.run { self.isLoadingEmotions = true }
+//        print("🔍 Starting emotion analysis...")
+//        let analyzedEmotions = analyzeEmotions(from: story.content)
+//        let emotionLabels = analyzedEmotions.map { $0.label }
+//        await MainActor.run { self.isLoadingEmotions = false }
+//        print("✅ Emotion analysis completed: \(emotionLabels)")
+//        return emotionLabels
+//    }
 
-    private func analyzeEmotions(from text: String) -> [EmotionResult] {
+    func analyzeEmotions(from text: String) -> [EmotionResult] {
         guard let model = model else {
             return []
         }
 
         do {
+            print("1")
             let input = try MLDictionaryFeatureProvider(dictionary: ["text": text])
             let prediction = try model.prediction(from: input)
+            print("3")
             let emotions = parseEmotionsFromPrediction(prediction)
 
             print("✅ Emotions analyzed: \(emotions.count) emotions found")

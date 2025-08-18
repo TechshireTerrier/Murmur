@@ -22,25 +22,6 @@ struct DailyEmotionView: View {
                 .accessibilityAddTraits(.isHeader)
                 .padding(.bottom, DailyEmotionView.screenWidth * 0.04)
 
-//            if isLoading {
-//                // 로딩 상태
-//                HStack {
-//                    ProgressView()
-//                        .scaleEffect(0.8)
-//                    Text("감정을 분석하고 있어요...")
-//                        .font(.PretendardBody)
-//                        .foregroundColor(.Text04)
-//                }
-//                .frame(maxWidth: .infinity)
-//                .padding()
-//            } else if emotions.isEmpty {
-//                // 감정이 없을 때
-//                Text("감정을 분석할 수 없어요")
-//                    .font(.PretendardBody)
-//                    .foregroundColor(.Text04)
-//                    .frame(maxWidth: .infinity)
-//                    .padding()
-//            } else {
             // 감정 라벨들 (원래 디자인)
             HStack {
                 ForEach(0 ..< emotions.count, id: \.self) { index in
@@ -51,7 +32,6 @@ struct DailyEmotionView: View {
                 }
             }
             .frame(width: DailyEmotionView.screenWidth * 0.9)
-//            }
         }
     }
 }

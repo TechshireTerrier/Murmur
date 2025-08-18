@@ -55,7 +55,7 @@ struct WriteView: View {
                     }
                     .accessibilityLabel("음성으로 기록하기")
                     .accessibilityAddTraits(.isButton)
-                    .padding(.top, 28)  // 텍스트 첫줄 높이에 맞춰 약간 내려줌
+                    .padding(.top, 28) // 텍스트 첫줄 높이에 맞춰 약간 내려줌
                 }
                 .padding(.top, 24)
                 .padding(.horizontal, 24)
@@ -89,16 +89,17 @@ struct WriteView: View {
                         : "오늘 어떤 일이 있었나요? 하루를 떠올리며 입력해보세요."
                 )
                 .accessibilityAddTraits(.allowsDirectInteraction)
-                .frame(minHeight: 140, maxHeight: 404)  // 텍스트 입력 영역 높이 고정
+                .frame(minHeight: 140, maxHeight: 404) // 텍스트 입력 영역 높이 고정
                 .padding(.horizontal, 16)
 
+//                WriteMurmurButton(title: "테스트 감정", font: .PretendardBodySemiBold) {
+//                    let story = Story(content: userInput)
+//                    EmotionAnalysisService().analyzeEmotions(from: story.content)
+//                }
                 // 작성 완료 버튼 (텍스트 입력 영역 바로 아래)
                 WriteMurmurButton(
                     title: "작성 완료",
                     font: .PretendardBodySemiBold,
-                    backgroundColor: Color.PointMint,
-                    foregroundColor: Color.Gray900,
-                    cornerRadius: 15
                 ) {
                     if userInput.trimmingCharacters(in: .whitespacesAndNewlines)
                         .isEmpty
@@ -106,11 +107,12 @@ struct WriteView: View {
                         viewModel.showFailAlert = true
                     } else {
                         isTextEditorFocused = false
-                        viewModel.saveStory(
+                        let story = viewModel.saveStory(
                             content: userInput,
-                            navigationManager: navigationManager
                         )
                         userInput = ""
+
+                        navigationManager.push(to: .loading(story: story))
                     }
                 }
                 .accessibilityLabel("작성 완료")
@@ -119,7 +121,7 @@ struct WriteView: View {
                 .padding(.horizontal, 16)
                 Spacer()
             }
-            .padding(.top, 24)  // 전체 VStack 상단 여백
+            .padding(.top, 24) // 전체 VStack 상단 여백
 
             // 실패 알림 뷰
             FailAlertView(isPresented: $viewModel.showFailAlert)

@@ -27,9 +27,9 @@
 		145A135A2E1957DC00FE8EDF /* RadioTestMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13562E1957DC00FE8EDF /* RadioTestMockData.swift */; };
 		145A135C2E1957DC00FE8EDF /* RadioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13582E1957DC00FE8EDF /* RadioViewModel.swift */; };
 		145A13602E195A5100FE8EDF /* DestinationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A135F2E195A4D00FE8EDF /* DestinationType.swift */; };
-		145A13622E195A6E00FE8EDF /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13612E195A6E00FE8EDF /* ViewRouter.swift */; };
 		145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13642E19643900FE8EDF /* SwipeBack.swift */; };
 		145A13672E1965C100FE8EDF /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A13662E1965C100FE8EDF /* CustomBackButton.swift */; };
+		1460C6502E535819004E3BB8 /* ModifyStoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1460C64F2E535819004E3BB8 /* ModifyStoryView.swift */; };
 		147D0D162E4B0FFD00503682 /* SentimentClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 147D0D142E4B0FFD00503682 /* SentimentClassifier.mlmodel */; };
 		147D0D182E4B1D3500503682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147D0D172E4B1D3500503682 /* LaunchScreen.storyboard */; };
 		1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */; };
@@ -43,18 +43,15 @@
 		1488E4E32E0AEF3F00988B12 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4D82E0AEF3F00988B12 /* Pretendard-Medium.otf */; };
 		1488E4E42E0AEF3F00988B12 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1488E4DA2E0AEF3F00988B12 /* Pretendard-SemiBold.otf */; };
 		1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4E62E0AF14C00988B12 /* Font+Extensions.swift */; };
-		1488E4EE2E0AF4D200988B12 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */; };
+		1488E4EE2E0AF4D200988B12 /* TotalStoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4ED2E0AF4CF00988B12 /* TotalStoryListViewModel.swift */; };
 		1488E4F02E0AF9A600988B12 /* TempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1488E4EF2E0AF9A200988B12 /* TempModel.swift */; };
 		14E6F55A2E2D771B00601AB6 /* MusicRecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6F5592E2D771B00601AB6 /* MusicRecommendationViewModel.swift */; };
 		14EBA5F52E0FB7E800314128 /* MurmurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5F42E0FB7E800314128 /* MurmurButton.swift */; };
 		14EBA5F72E0FC3F200314128 /* TotalStoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */; };
-		14EBA5F92E0FC5B000314128 /* TotalStoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */; };
-		14EBA5FD2E0FCB3500314128 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5FC2E0FCB3400314128 /* Song.swift */; };
 		14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */; };
 		14EBA6022E0FDB8100314128 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */; };
 		14EBA60B2E0FEB1100314128 /* MarqueeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */; };
 		AA5462E52E156B320061D49F /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5462E42E156B320061D49F /* RecordView.swift */; };
-		AA7E0E912E2546170037DFED /* CheckSTTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7E0E902E2546170037DFED /* CheckSTTView.swift */; };
 		AAA5964E2E118E6500923793 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5964D2E118E6500923793 /* WriteView.swift */; };
 		AAA596502E118E7A00923793 /* FailAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5964F2E118E7A00923793 /* FailAlertView.swift */; };
 		AAA596522E118EA300923793 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA596512E118EA300923793 /* WriteViewModel.swift */; };
@@ -65,7 +62,6 @@
 		F5964E4E2E228F2D00C8C507 /* SubtitleServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */; };
 		F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */; };
 		F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */; };
-		F5DFAAEA2E4B0C3900EC34FB /* TotalStoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */; };
 		F5DFAAEE2E4B0C9200EC34FB /* EmotionAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFAAED2E4B0C9200EC34FB /* EmotionAnalysisService.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,9 +87,9 @@
 		145A13562E1957DC00FE8EDF /* RadioTestMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioTestMockData.swift; sourceTree = "<group>"; };
 		145A13582E1957DC00FE8EDF /* RadioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioViewModel.swift; sourceTree = "<group>"; };
 		145A135F2E195A4D00FE8EDF /* DestinationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationType.swift; sourceTree = "<group>"; };
-		145A13612E195A6E00FE8EDF /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		145A13642E19643900FE8EDF /* SwipeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeBack.swift; sourceTree = "<group>"; };
 		145A13662E1965C100FE8EDF /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		1460C64F2E535819004E3BB8 /* ModifyStoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyStoryView.swift; sourceTree = "<group>"; };
 		147D0D142E4B0FFD00503682 /* SentimentClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SentimentClassifier.mlmodel; sourceTree = "<group>"; };
 		147D0D172E4B1D3500503682 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1488E4D02E0ACA2700988B12 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -108,18 +104,15 @@
 		1488E4DB2E0AEF3F00988B12 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
 		1488E4E52E0AEFA400988B12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1488E4E62E0AF14C00988B12 /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
-		1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		1488E4ED2E0AF4CF00988B12 /* TotalStoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStoryListViewModel.swift; sourceTree = "<group>"; };
 		1488E4EF2E0AF9A200988B12 /* TempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempModel.swift; sourceTree = "<group>"; };
 		14E6F5592E2D771B00601AB6 /* MusicRecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicRecommendationViewModel.swift; sourceTree = "<group>"; };
 		14EBA5F42E0FB7E800314128 /* MurmurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MurmurButton.swift; sourceTree = "<group>"; };
 		14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStoryListView.swift; sourceTree = "<group>"; };
-		14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStoryListViewModel.swift; sourceTree = "<group>"; };
-		14EBA5FC2E0FCB3400314128 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		14EBA5FF2E0FD87B00314128 /* StoryListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListCard.swift; sourceTree = "<group>"; };
 		14EBA6012E0FDB7C00314128 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		14EBA60A2E0FEB0B00314128 /* MarqueeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarqueeText.swift; sourceTree = "<group>"; };
 		AA5462E42E156B320061D49F /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
-		AA7E0E902E2546170037DFED /* CheckSTTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSTTView.swift; sourceTree = "<group>"; };
 		AAA5964D2E118E6500923793 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		AAA5964F2E118E7A00923793 /* FailAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailAlertView.swift; sourceTree = "<group>"; };
 		AAA596512E118EA300923793 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
@@ -130,7 +123,6 @@
 		F5964E4D2E228F2400C8C507 /* SubtitleServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E862E22B7E900C8C507 /* TTSServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSServiceImpl.swift; sourceTree = "<group>"; };
 		F5964E892E22BC7C00C8C507 /* RadioSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioSessionManager.swift; sourceTree = "<group>"; };
-		F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStoryListViewModel.swift; sourceTree = "<group>"; };
 		F5DFAAED2E4B0C9200EC34FB /* EmotionAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionAnalysisService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,7 +180,6 @@
 			children = (
 				145A135F2E195A4D00FE8EDF /* DestinationType.swift */,
 				145A134F2E19544600FE8EDF /* NavigationManager.swift */,
-				145A13612E195A6E00FE8EDF /* ViewRouter.swift */,
 				145A13642E19643900FE8EDF /* SwipeBack.swift */,
 			);
 			path = Navigation;
@@ -217,8 +208,7 @@
 		145D635E2E4D6FED009F23FD /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				14EBA5F82E0FC5A900314128 /* TotalStoryListViewModel.swift */,
-				F5DFAAE92E4B0C3900EC34FB /* TotalStoryListViewModel.swift */,
+				1488E4ED2E0AF4CF00988B12 /* TotalStoryListViewModel.swift */,
 				14E6F5592E2D771B00601AB6 /* MusicRecommendationViewModel.swift */,
 			);
 			path = ViewModels;
@@ -292,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				D1B9A9A62E11290800B7BAA0 /* Story.swift */,
-				14EBA5FC2E0FCB3400314128 /* Song.swift */,
 				1488E4EF2E0AF9A200988B12 /* TempModel.swift */,
 			);
 			path = Models;
@@ -312,12 +301,10 @@
 			isa = PBXGroup;
 			children = (
 				14363FD82E0A9EB80030A623 /* HomeView.swift */,
-				1488E4ED2E0AF4CF00988B12 /* HomeViewModel.swift */,
 				AAA5964D2E118E6500923793 /* WriteView.swift */,
 				AAA596512E118EA300923793 /* WriteViewModel.swift */,
 				AAA5964F2E118E7A00923793 /* FailAlertView.swift */,
 				AA5462E42E156B320061D49F /* RecordView.swift */,
-				AA7E0E902E2546170037DFED /* CheckSTTView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -331,6 +318,7 @@
 				14EBA5F62E0FC3F200314128 /* TotalStoryListView.swift */,
 				0667FC562E1C0E1A006F2CE9 /* LoadingView.swift */,
 				1449606A2E293C35003184F0 /* DetailStoryView.swift */,
+				1460C64F2E535819004E3BB8 /* ModifyStoryView.swift */,
 			);
 			path = Story;
 			sourceTree = "<group>";
@@ -464,6 +452,7 @@
 				AAA596502E118E7A00923793 /* FailAlertView.swift in Sources */,
 				AAA5964E2E118E6500923793 /* WriteView.swift in Sources */,
 				06EFFDAB2E0FDB37000F1612 /* SongStoryView.swift in Sources */,
+				1460C6502E535819004E3BB8 /* ModifyStoryView.swift in Sources */,
 				0667FC572E1C0E1A006F2CE9 /* LoadingView.swift in Sources */,
 				145A13502E19544600FE8EDF /* NavigationManager.swift in Sources */,
 				06EFFDAD2E10FA3F000F1612 /* DailyEmotionView.swift in Sources */,
@@ -476,27 +465,23 @@
 				14EBA5F52E0FB7E800314128 /* MurmurButton.swift in Sources */,
 				AAA596542E1190CB00923793 /* WriteMurmurButton.swift in Sources */,
 				14363FDB2E0A9EB80030A623 /* HomeView.swift in Sources */,
-				145A13622E195A6E00FE8EDF /* ViewRouter.swift in Sources */,
 				F5DFAAEE2E4B0C9200EC34FB /* EmotionAnalysisService.swift in Sources */,
 				145A135A2E1957DC00FE8EDF /* RadioTestMockData.swift in Sources */,
 				145A135C2E1957DC00FE8EDF /* RadioViewModel.swift in Sources */,
 				145A13542E1957DA00FE8EDF /* RadioService.swift in Sources */,
-				F5DFAAEA2E4B0C3900EC34FB /* TotalStoryListViewModel.swift in Sources */,
 				145A13602E195A5100FE8EDF /* DestinationType.swift in Sources */,
 				F5964E8A2E22BC8200C8C507 /* RadioSessionManager.swift in Sources */,
 				145A13552E1957DA00FE8EDF /* RadioServiceImpl.swift in Sources */,
 				D1B9A9A72E11290800B7BAA0 /* Story.swift in Sources */,
 				145A13652E19643900FE8EDF /* SwipeBack.swift in Sources */,
 				14EBA6002E0FD87B00314128 /* StoryListCard.swift in Sources */,
-				AA7E0E912E2546170037DFED /* CheckSTTView.swift in Sources */,
 				14EBA5F72E0FC3F200314128 /* TotalStoryListView.swift in Sources */,
 				14363FDC2E0A9EB80030A623 /* MurmurApp.swift in Sources */,
-				14EBA5F92E0FC5B000314128 /* TotalStoryListViewModel.swift in Sources */,
 				14EBA60B2E0FEB1100314128 /* MarqueeText.swift in Sources */,
 				14EBA6022E0FDB8100314128 /* Date+Extensions.swift in Sources */,
 				AA5462E52E156B320061D49F /* RecordView.swift in Sources */,
 				1488E4E72E0AF15200988B12 /* Font+Extensions.swift in Sources */,
-				1488E4EE2E0AF4D200988B12 /* HomeViewModel.swift in Sources */,
+				1488E4EE2E0AF4D200988B12 /* TotalStoryListViewModel.swift in Sources */,
 				F5964E4E2E228F2D00C8C507 /* SubtitleServiceImpl.swift in Sources */,
 				1488E4D12E0ACA2B00988B12 /* Color+Extensions.swift in Sources */,
 				06EFFDAF2E111627000F1612 /* StoryMusicView.swift in Sources */,
@@ -504,7 +489,6 @@
 				144BF5002E2D65F800B34FE8 /* RadioSubtitleView.swift in Sources */,
 				145A13672E1965C100FE8EDF /* CustomBackButton.swift in Sources */,
 				F5964E872E22B7F000C8C507 /* TTSServiceImpl.swift in Sources */,
-				14EBA5FD2E0FCB3500314128 /* Song.swift in Sources */,
 				147D0D162E4B0FFD00503682 /* SentimentClassifier.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

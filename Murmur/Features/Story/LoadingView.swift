@@ -38,7 +38,7 @@ struct LoadingView: View {
             .navigationBarBackButtonHidden()
             .onAppear {
                 Task {
-                    story.emotions = await EmotionAnalysisService().analyzeEmotions(from: story)
+                    story.emotions = EmotionAnalysisService().analyzeEmotions(from: story.content).map { $0.label }
                     guard let searchTerm = story.emotions.first else {
                         // 감정이 없을 경우 기본 메시지 표시
                         print("감정이 없습니다.")

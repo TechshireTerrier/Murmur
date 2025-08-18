@@ -5,13 +5,13 @@
 //  Created by 김현기 on 6/28/25.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct TotalStoryListView: View {
     @StateObject private var viewModel: TotalStoryListViewModel
     @EnvironmentObject private var navigationManager: NavigationManager
-    
+
     init(modelContext: ModelContext) {
         _viewModel = StateObject(wrappedValue: TotalStoryListViewModel(modelContext: modelContext))
     }
@@ -58,6 +58,9 @@ struct TotalStoryListView: View {
                             ForEach(viewModel.stories) { story in
                                 StoryListCard(story: story)
                                     .padding(.bottom, 12)
+                                    .onTapGesture {
+                                        navigationManager.push(to: .detailStory(story: story))
+                                    }
                             }
                         }
                     }
@@ -72,16 +75,13 @@ struct TotalStoryListView: View {
                 navigationManager.pop()
             }
         }
-        .onAppear {
-            viewModel.refreshStories()
-        }
     }
 }
 
 #Preview {
     let config = ModelConfiguration(isStoredInMemoryOnly: true)
     let container = try! ModelContainer(for: Story.self, configurations: config)
-    
-    return TotalStoryListView(modelContext: container.mainContext)
+
+    TotalStoryListView(modelContext: container.mainContext)
         .preferredColorScheme(.dark)
 }

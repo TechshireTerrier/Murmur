@@ -1,7 +1,7 @@
 import AVFoundation
 import Foundation
 import Speech
-import SwiftData  // 1. SwiftData 임포트
+import SwiftData // 1. SwiftData 임포트
 import SwiftUI
 
 @MainActor
@@ -13,7 +13,8 @@ class WriteViewModel: ObservableObject {
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
     }
-    func saveStory(content: String, navigationManager: NavigationManager) {
+
+    func saveStory(content: String) -> Story {
         print("saveStory called with content: '\(content)'")
 
         if content.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -33,21 +34,23 @@ class WriteViewModel: ObservableObject {
             print("Story inserted into modelContext")
 
             do {
-                try modelContext.save()
                 print("Story saved successfully!")
                 print("Story ID: \(story.id)")
                 print("Story content: \(story.content)")
                 print("Story created at: \(story.createdAt)")
-
-                // 저장 후 LoadingView로 이동
-                navigationManager.push(to: .loading(story: story))
+                try modelContext.save()
             } catch {
                 print("Failed to save story: \(error)")
                 showFailAlert = true
             }
+
+            return story
         }
+
+        return Story(content: "") // 빈 Story 객체 반환
     }
 }
+
 class AudioRecorder: NSObject, ObservableObject {
     private var audioEngine = AVAudioEngine()
     private var speechRecognizer = SFSpeechRecognizer(
@@ -87,7 +90,7 @@ class AudioRecorder: NSObject, ObservableObject {
 
         node.removeTap(onBus: 0)
         node.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) {
-            (buffer, _) in
+            buffer, _ in
             self.request.append(buffer)
         }
         audioEngine.prepare()
@@ -95,7 +98,7 @@ class AudioRecorder: NSObject, ObservableObject {
 
         recognitionTask = speechRecognizer?.recognitionTask(with: request) {
             result,
-            error in
+                error in
             if let result = result {
                 DispatchQueue.main.async {
                     self.userInputBinding?.wrappedValue =

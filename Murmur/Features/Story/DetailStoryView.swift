@@ -9,7 +9,6 @@ import SwiftData
 import SwiftUI
 
 struct DetailStoryView: View {
-//    @StateObject private var viewModel: DetailStoryViewModel
     @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
     @EnvironmentObject private var navigationManager: NavigationManager
 
@@ -17,7 +16,6 @@ struct DetailStoryView: View {
     @Environment(\.modelContext) private var modelContext
 
     init(story: Story) {
-//        _viewModel = StateObject(wrappedValue: DetailStoryViewModel(story: story))
         self.story = story
     }
 
