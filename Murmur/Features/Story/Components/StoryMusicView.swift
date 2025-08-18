@@ -9,10 +9,7 @@ import MusicKit
 import SwiftUI
 
 struct StoryMusicView: View {
-    let musicRecommendationVM: MusicRecommendationViewModel
-    
-    @State var isPlaying: Bool = false
-
+    @ObservedObject var musicRecommendationVM: MusicRecommendationViewModel
     static var screenWidth: CGFloat { UIScreen.main.bounds.width }
     static var widthSize: CGFloat { screenWidth * 0.9 }
 
@@ -61,15 +58,14 @@ struct StoryMusicView: View {
 
                 Button {
                     print("재생 버튼 눌림")
-                    isPlaying.toggle()
-                    if isPlaying {
-                        musicRecommendationVM.playPreview()
-                    } else {
+                    if musicRecommendationVM.isMusicPlaying {
                         musicRecommendationVM.stopPlayback()
+                    } else {
+                        musicRecommendationVM.playPreview()
                     }
                 } label: {
-                    if isPlaying {
-                        Image(systemName: "pause.circle.fill")
+                    if musicRecommendationVM.isMusicPlaying {
+                        Image(systemName: "stop.circle.fill")
                             .resizable()
                             .frame(width: StoryMusicView.screenWidth * 0.1, height: StoryMusicView.screenWidth * 0.1)
                             .foregroundStyle(Color.text07)
