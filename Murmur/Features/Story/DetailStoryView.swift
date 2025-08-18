@@ -31,12 +31,6 @@ struct DetailStoryView: View {
             .frame(maxWidth: .infinity)
         }
         .navigationBarBackButtonHidden()
-        .enableSwipeBack()
-        .toolbar {
-            CustomBackButton {
-                navigationManager.pop()
-            }
-        }
         .onAppear {
             updateStoryWithRecommendedSong()
             // ViewModel에 modelContext 설정
