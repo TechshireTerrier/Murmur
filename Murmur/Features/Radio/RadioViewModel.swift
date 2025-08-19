@@ -94,8 +94,35 @@ final class RadioViewModel: ObservableObject {
             musicRecommendationViewModel.playPreview()
             scheduleMusicCompletion()
         } else {
-            print("⚠️ 추천된 음악이 없습니다")
-            scheduleMusicCompletion()
+            // 🆕 최소 변경: Story 정보로 곡 검색 후 재생
+            print("⚠️ 추천된 음악이 없습니다. Story 정보로 검색합니다.")
+            
+            // Story에 곡 정보가 있으면 검색해서 재생
+            if !currentStory.recommendedSongTitle.isEmpty && !currentStory.recommendedSongAuthor.isEmpty {
+                // 일단 Story 정보를 자막에 표시
+                let musicInfo = "\(currentStory.recommendedSongTitle) - \(currentStory.recommendedSongAuthor)"
+                DispatchQueue.main.async { [weak self] in
+                    guard let self = self else { return }
+                    self.currentSubtitle = musicInfo
+                    self.isMusicPlaying = true
+                    print("📝 Story 정보로 자막 표시: \(musicInfo)")
+                    self.objectWillChange.send()
+                }
+                
+                // 백그라운드에서 실제 곡 검색 후 재생
+                Task {
+                    await musicRecommendationViewModel.searchSongByTitleAndArtist(currentStory)
+                    await MainActor.run {
+                        if musicRecommendationViewModel.recommendedTrack != nil {
+                            musicRecommendationViewModel.playPreview()
+                        }
+                    }
+                }
+                scheduleMusicCompletion()
+            } else {
+                print("⚠️ Story에도 곡 정보가 없습니다")
+                scheduleMusicCompletion()
+            }
         }
     }
     
