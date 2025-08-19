@@ -11,10 +11,13 @@ struct RadioView: View {
     @StateObject private var viewModel: RadioViewModel
     @EnvironmentObject private var navigationManager: NavigationManager
     @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
-    
-    init() {
-        // 기본 MusicRecommendationViewModel로 초기화
-        self._viewModel = StateObject(wrappedValue: RadioViewModel(
+
+    let story: Story
+
+    init(story: Story) {
+        self.story = story
+        _viewModel = StateObject(wrappedValue: RadioViewModel(
+            story: story,
             musicRecommendationViewModel: MusicRecommendationViewModel()
         ))
     }
@@ -45,8 +48,7 @@ struct RadioView: View {
         .onAppear {
             print(" RadioView onAppear")
             print("🔍 musicRecommendationVM.recommendedTrack: \(String(describing: musicRecommendationVM.recommendedTrack))")
-            
-            // EnvironmentObject에서 전달받은 MusicRecommendationViewModel 설정
+            viewModel.reloadScriptAndSubtitles()
             viewModel.setMusicViewModel(musicRecommendationVM)
             viewModel.startPlaying()
         }
@@ -64,7 +66,7 @@ struct RadioView: View {
 
 #Preview {
     NavigationView {
-        RadioView()
+        RadioView(story: MockData.sampleStory)
             .environmentObject(NavigationManager())
             .environmentObject(MusicRecommendationViewModel())
     }

@@ -57,7 +57,9 @@ private extension RadioServiceImpl {
         return """
         안녕하세요. Murmur 라디오 시작합니다.
 
-        지금은 \(dateTimeInfo.date), \(dateTimeInfo.dayOfWeek), \(dateTimeInfo.time)입니다.
+        지금은 \(dateTimeInfo.date), \(dateTimeInfo.dayOfWeek)
+
+        \(dateTimeInfo.time)입니다.
 
         오늘, 이런 사연이 도착했어요.
 

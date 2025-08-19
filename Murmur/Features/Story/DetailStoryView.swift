@@ -27,13 +27,21 @@ struct DetailStoryView: View {
                     DailyEmotionView(emotions: story.emotions)
                     StoryMusicView(musicRecommendationVM: musicRecommendationVM)
                 }
-                DetailStoryButtonView()
+                DetailStoryButtonView(
+                    onRadio: {
+                        navigationManager.push(to: .radio(story: viewModel.story))
+                    },
+                    onClose: {
+                        navigationManager.popToRoot()
+                    }
+                )
             }
             .frame(maxWidth: .infinity)
         }
         .navigationBarBackButtonHidden()
         .onAppear {
             updateSongWithStoryOrRecommendedTrack()
+            viewModel.setModelContext(modelContext)
         }
         .onDisappear {
             musicRecommendationVM.stopPlayback()
@@ -67,3 +75,4 @@ struct DetailStoryView: View {
     DetailStoryView(story: MockData.sampleStory)
         .environmentObject(MusicRecommendationViewModel())
 }
+

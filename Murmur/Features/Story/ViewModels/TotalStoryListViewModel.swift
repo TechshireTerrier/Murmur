@@ -37,7 +37,6 @@ class TotalStoryListViewModel: ObservableObject {
     func refreshStories() {
         fetchStoriesFromSwiftData()
     }
-
     func getRandomStory() -> Story? {
         guard !stories.isEmpty else { return nil }
         return stories.randomElement()
