@@ -36,8 +36,8 @@ func ViewRouter(for destination: DestinationType, modelContext: ModelContext) ->
         DetailStoryView(story: story)
     case let .modifyStory(story):
         ModifyStoryView(story: story)
-    case .radio:
-        RadioView()
+    case let .radio(story):
+        RadioView(story: story)
     case let .loading(story):
         LoadingView(story: story)
     }

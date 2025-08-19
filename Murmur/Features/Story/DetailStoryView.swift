@@ -29,7 +29,7 @@ struct DetailStoryView: View {
                 }
                 DetailStoryButtonView(
                     onRadio: {
-                        navigationManager.push(to: .radio(story: viewModel.story))
+                        navigationManager.push(to: .radio(story: story))
                     },
                     onClose: {
                         navigationManager.popToRoot()
@@ -41,7 +41,6 @@ struct DetailStoryView: View {
         .navigationBarBackButtonHidden()
         .onAppear {
             updateSongWithStoryOrRecommendedTrack()
-            viewModel.setModelContext(modelContext)
         }
         .onDisappear {
             musicRecommendationVM.stopPlayback()
