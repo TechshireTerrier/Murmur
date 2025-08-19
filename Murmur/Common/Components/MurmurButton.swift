@@ -18,9 +18,10 @@ struct MurmurButton: View {
             Text(text)
                 .font(.PretendardTitle1Bold)
                 .foregroundStyle(textColor)
+                .frame(width: 300, height: 100)
+                .background(bgColor)
+                .cornerRadius(20)
         }
-        .frame(width: 300, height: 100)
-        .background(bgColor)
-        .cornerRadius(20)
+        .buttonStyle(PlainButtonStyle())
     }
 }

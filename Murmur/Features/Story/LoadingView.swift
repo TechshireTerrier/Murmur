@@ -10,8 +10,13 @@ import SwiftUI
 struct LoadingView: View {
     @EnvironmentObject private var navigationManager: NavigationManager
     @EnvironmentObject private var musicRecommendationVM: MusicRecommendationViewModel
-    
-    let story: Story
+    @StateObject private var emotionAnalysisService = EmotionAnalysisService()
+
+    @State var story: Story
+
+    init(story: Story) {
+        _story = State(initialValue: story)
+    }
 
     var body: some View {
         if musicRecommendationVM.isMusicAuthorized {
@@ -33,12 +38,18 @@ struct LoadingView: View {
             .navigationBarBackButtonHidden()
             .onAppear {
                 Task {
-                    await musicRecommendationVM.searchAndRecommendSong(searchTerm: "Happy")
+                    story.emotions = EmotionAnalysisService().analyzeEmotions(from: story.content).map { $0.label }
+                    guard story.emotions.first != nil else {
+                        // 감정이 없을 경우 기본 메시지 표시
+                        print("감정이 없습니다.")
+                        navigationManager.pop()
+                        return
+                    }
+                    await musicRecommendationVM.searchAndRecommendSong(searchTerm: story.emotions[0])
                 }
             }
-            .onChange(of: musicRecommendationVM.recommendedTrack) { newValue in
-                if newValue != nil {
-                    // story를 DetailStoryView에 전달
+            .onChange(of: musicRecommendationVM.recommendedTrack != nil) { hasTrack in
+                if hasTrack {
                     navigationManager.push(to: .detailStory(story: story))
                 }
             }

@@ -5,10 +5,11 @@
 //  Created by 김현기 on 6/24/25.
 //
 
+import SwiftData
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var homeViewModel = HomeViewModel()
+//    @StateObject private var homeViewModel = HomeViewModel()
     @EnvironmentObject private var navigationManager: NavigationManager
 
     var body: some View {
@@ -16,7 +17,7 @@ struct HomeView: View {
             Color.Gray900
                 .ignoresSafeArea()
             VStack {
-                OnAirSignView(isOn: homeViewModel.haveTodayStory)
+                OnAirSignView(isOn: true)
                     .padding(.bottom, 125)
 
                 MurmurButton(
@@ -44,6 +45,9 @@ struct HomeView: View {
             }
             .padding(.horizontal, 48)
         }
+//        .onAppear {
+//            homeViewModel.refreshStories()
+//        }
     }
 }
 
@@ -85,6 +89,8 @@ struct OnAirText: View {
 }
 
 #Preview {
+    @Previewable @Environment(\.modelContext) var ModelContext
+
     HomeView()
         .environmentObject(NavigationManager())
 }

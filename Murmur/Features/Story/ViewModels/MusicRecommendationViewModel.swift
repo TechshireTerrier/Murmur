@@ -9,15 +9,25 @@ import AVFoundation
 import MusicKit
 import SwiftUI
 
+protocol MusicPreviewable {
+    var title: String { get }
+    var artistName: String { get }
+    var artwork: Artwork? { get }
+    var previewAssets: [PreviewAsset]? { get }
+}
+
+extension Song: MusicPreviewable {}
+extension Track: MusicPreviewable {}
+
 class MusicRecommendationViewModel: ObservableObject {
     @Published var isMusicAuthorized: Bool = false
     @Published var foundPlaylist: Playlist?
-    @Published var recommendedTrack: MusicItemCollection<Track>.Element?
+    @Published var recommendedTrack: MusicPreviewable? = nil
     @Published var playerItem: AVPlayerItem?
-    @Published var isMusicPlaying: Bool = false  // 음악 재생 상태 추가
+    @Published var isMusicPlaying: Bool = false // 음악 재생 상태 추가
 
     private let player: AVPlayer = .init()
-    private var musicCompletionTimer: Timer?  // 음악 완료 타이머 추가
+    private var musicCompletionTimer: Timer? // 음악 완료 타이머 추가
 
     // 1️⃣ MusicKit 권한을 요청하는 비동기 함수
     @MainActor
@@ -47,6 +57,26 @@ class MusicRecommendationViewModel: ObservableObject {
         }
     }
 
+    func searchSongByTitleAndArtist(_ story: Story) async {
+        let searchTerm = "\(story.recommendedSongTitle) \(story.recommendedSongAuthor)"
+        do {
+            var request = MusicCatalogSearchRequest(term: searchTerm, types: [Song.self])
+            request.limit = 1
+            let response = try await request.response()
+
+            if let song = response.songs.first {
+                await MainActor.run {
+                    self.recommendedTrack = song
+                }
+                print("검색된 곡: \(recommendedTrack?.title) by \(recommendedTrack?.artistName)")
+            } else {
+                print("검색 결과에 곡이 없습니다.")
+            }
+        } catch {
+            print("Error performing initial music search: \(error.localizedDescription)")
+        }
+    }
+
     // 2️⃣ 검색 및 랜덤 곡 추천 로직을 수행하는 함수
     func searchAndRecommendSong(searchTerm: String) async {
         do {
@@ -58,6 +88,7 @@ class MusicRecommendationViewModel: ObservableObject {
             // 검색된 첫 번째 플레이리스트를 가져옴
             guard let foundPlaylist = response.playlists.first else {
                 print("검색 결과에 플레이리스트가 없습니다.")
+                await searchAndRecommendSong(searchTerm: "명동") // 기본 검색어로 다시 시도
                 return
             }
 
@@ -91,19 +122,19 @@ class MusicRecommendationViewModel: ObservableObject {
                 print("미리듣기를 지원하지 않는 곡이거나 URL이 없습니다.")
                 return
             }
-            
+
             await MainActor.run {
                 playerItem = AVPlayerItem(url: url)
                 player.replaceCurrentItem(with: playerItem)
                 player.play()
-                
+
                 // 음악 재생 상태 시작
                 isMusicPlaying = true
-                
+
                 // 음악 완료 타이머 설정 (30초 미리듣기 + 여유시간)
                 startMusicCompletionTimer()
             }
-            
+
             print("\(String(describing: recommendedTrack?.title)) 30초 미리듣기를 재생합니다.")
         }
     }
@@ -112,21 +143,21 @@ class MusicRecommendationViewModel: ObservableObject {
     func stopPlayback() {
         player.pause()
         player.replaceCurrentItem(with: nil)
-        
+
         // 음악 재생 상태 정지
         isMusicPlaying = false
-        
+
         // 타이머 정리
         stopMusicCompletionTimer()
-        
+
         print("플레이어를 정지했습니다.")
     }
-    
+
     // 5️⃣ 음악 완료 타이머 시작
     private func startMusicCompletionTimer() {
         // 기존 타이머 정리
         stopMusicCompletionTimer()
-        
+
         // 30초 미리듣기 + 1초 여유시간 후 완료 처리
         musicCompletionTimer = Timer.scheduledTimer(withTimeInterval: 31.0, repeats: false) { [weak self] _ in
             DispatchQueue.main.async {
@@ -134,13 +165,13 @@ class MusicRecommendationViewModel: ObservableObject {
             }
         }
     }
-    
+
     // 6️⃣ 음악 완료 타이머 정지
     private func stopMusicCompletionTimer() {
         musicCompletionTimer?.invalidate()
         musicCompletionTimer = nil
     }
-    
+
     // 7️⃣ 음악 재생 완료 처리
     private func onMusicCompleted() {
         isMusicPlaying = false

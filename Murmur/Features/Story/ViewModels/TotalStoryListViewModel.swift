@@ -1,8 +1,8 @@
 //
-//  TotalStoryListViewModel.swift
+//  HomeViewModel.swift
 //  Murmur
 //
-//  Created by 김현기 on 6/28/25.
+//  Created by 김현기 on 6/24/25.
 //
 
 import SwiftData
@@ -36,5 +36,9 @@ class TotalStoryListViewModel: ObservableObject {
 
     func refreshStories() {
         fetchStoriesFromSwiftData()
+    }
+    func getRandomStory() -> Story? {
+        guard !stories.isEmpty else { return nil }
+        return stories.randomElement()
     }
 }

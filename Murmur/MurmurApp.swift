@@ -12,13 +12,13 @@ import SwiftUI
 struct MurmurApp: App {
     @StateObject private var navigationManager = NavigationManager()
     @StateObject private var musicRecommendationVM = MusicRecommendationViewModel()
-    
+
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Story.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-        
+
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {

@@ -17,6 +17,15 @@ struct WriteMurmurButton: View {
     let cornerRadius: CGFloat
     let action: () -> Void
 
+    init(title: String, font: Font, backgroundColor: Color = .PointMint, foregroundColor: Color = .Gray900, cornerRadius: CGFloat = 15.0, action: @escaping () -> Void) {
+        self.title = title
+        self.font = font
+        self.backgroundColor = backgroundColor
+        self.foregroundColor = foregroundColor
+        self.cornerRadius = cornerRadius
+        self.action = action
+    }
+
     var body: some View {
         Button(action: action) {
             Text(title)

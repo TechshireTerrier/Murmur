@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct DetailStoryButtonView: View {
-    @EnvironmentObject private var navigationManager: NavigationManager
+    let onRadio: () -> Void
+    let onClose: () -> Void
 
     var body: some View {
-        Button {
-            navigationManager.push(to: .radio)
-        } label: {
+        Button(action: onRadio) {
             Text("라디오 듣기")
                 .modifier(LongButtonModifier(buttonColor: Color.keyMint))
         }
@@ -21,9 +20,7 @@ struct DetailStoryButtonView: View {
         .accessibilityAddTraits(.isButton)
         .padding(.top, 20)
 
-        Button {
-            navigationManager.popToRoot()
-        } label: {
+        Button(action: onClose) {
             Text("닫기")
                 .modifier(LongButtonModifier(buttonColor: Color.gray400))
         }
@@ -34,5 +31,8 @@ struct DetailStoryButtonView: View {
 }
 
 #Preview {
-    DetailStoryButtonView()
+    DetailStoryButtonView(
+        onRadio: {},
+        onClose: {}
+    )
 }
