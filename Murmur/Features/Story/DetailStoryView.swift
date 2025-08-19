@@ -33,20 +33,17 @@ struct DetailStoryView: View {
         }
         .navigationBarBackButtonHidden()
         .onAppear {
-            updateStoryWithRecommendedSong()
-            // ViewModel에 modelContext 설정
-//            viewModel.setModelContext(modelContext)
+            updateSongWithStoryOrRecommendedTrack()
         }
         .onDisappear {
             musicRecommendationVM.stopPlayback()
+            musicRecommendationVM.recommendedTrack = nil
         }
     }
 
-    private func updateStoryWithRecommendedSong() {
+    private func updateSongWithStoryOrRecommendedTrack() {
         // 추천된 노래가 있고, Story에 아직 노래 정보가 없는 경우에만 업데이트
-        if let recommendedTrack = musicRecommendationVM.recommendedTrack,
-           story.recommendedSongTitle.isEmpty
-        {
+        if let recommendedTrack = musicRecommendationVM.recommendedTrack {
             // Story 객체에 노래 정보 업데이트sef
             story.recommendedSongTitle = recommendedTrack.title
             story.recommendedSongAuthor = recommendedTrack.artistName
@@ -57,6 +54,10 @@ struct DetailStoryView: View {
                 print("Story updated with song: \(recommendedTrack.title) by \(recommendedTrack.artistName)")
             } catch {
                 print("Failed to update story with song info: \(error)")
+            }
+        } else {
+            Task {
+                await musicRecommendationVM.searchSongByTitleAndArtist(story)
             }
         }
     }

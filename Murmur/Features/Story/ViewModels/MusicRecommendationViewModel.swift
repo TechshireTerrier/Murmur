@@ -12,6 +12,7 @@ import SwiftUI
 protocol MusicPreviewable {
     var title: String { get }
     var artistName: String { get }
+    var artwork: Artwork? { get }
     var previewAssets: [PreviewAsset]? { get }
 }
 
@@ -21,7 +22,7 @@ extension Track: MusicPreviewable {}
 class MusicRecommendationViewModel: ObservableObject {
     @Published var isMusicAuthorized: Bool = false
     @Published var foundPlaylist: Playlist?
-    @Published var recommendedTrack: MusicPreviewable?
+    @Published var recommendedTrack: MusicPreviewable? = nil
     @Published var playerItem: AVPlayerItem?
     @Published var isMusicPlaying: Bool = false // 음악 재생 상태 추가
 
@@ -56,8 +57,8 @@ class MusicRecommendationViewModel: ObservableObject {
         }
     }
 
-    func searchSongByTitleAndArtist(title: String, artist: String) async {
-        let searchTerm = "\(title) \(artist)"
+    func searchSongByTitleAndArtist(_ story: Story) async {
+        let searchTerm = "\(story.recommendedSongTitle) \(story.recommendedSongAuthor)"
         do {
             var request = MusicCatalogSearchRequest(term: searchTerm, types: [Song.self])
             request.limit = 1
@@ -67,7 +68,7 @@ class MusicRecommendationViewModel: ObservableObject {
                 await MainActor.run {
                     self.recommendedTrack = song
                 }
-                print("검색된 곡: \(song.title) by \(song.artistName)")
+                print("검색된 곡: \(recommendedTrack?.title) by \(recommendedTrack?.artistName)")
             } else {
                 print("검색 결과에 곡이 없습니다.")
             }

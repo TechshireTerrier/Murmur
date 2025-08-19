@@ -39,7 +39,7 @@ struct LoadingView: View {
             .onAppear {
                 Task {
                     story.emotions = EmotionAnalysisService().analyzeEmotions(from: story.content).map { $0.label }
-                    guard let searchTerm = story.emotions.first else {
+                    guard story.emotions.first != nil else {
                         // 감정이 없을 경우 기본 메시지 표시
                         print("감정이 없습니다.")
                         navigationManager.pop()
@@ -48,9 +48,8 @@ struct LoadingView: View {
                     await musicRecommendationVM.searchAndRecommendSong(searchTerm: story.emotions[0])
                 }
             }
-            .onChange(of: musicRecommendationVM.recommendedTrack) { newValue in
-                if newValue != nil {
-                    // story를 DetailStoryView에 전달
+            .onChange(of: musicRecommendationVM.recommendedTrack != nil) { hasTrack in
+                if hasTrack {
                     navigationManager.push(to: .detailStory(story: story))
                 }
             }
