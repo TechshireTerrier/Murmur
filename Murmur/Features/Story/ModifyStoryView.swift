@@ -55,8 +55,15 @@ struct ModifyStoryView: View {
             }
             .frame(maxWidth: .infinity)
         }
+        .onTapGesture {
+                    hideKeyboard()
+                }
         .navigationBarBackButtonHidden()
     }
+    
+    private func hideKeyboard() {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
 }
 
 #Preview {
