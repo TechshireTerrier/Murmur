@@ -30,14 +30,15 @@ struct TotalStoryListView: View {
                     }) {
                         Text("랜덤 사연 읽기")
                             .font(.PretendardBodyBold)
-                            .foregroundStyle(.text07)
+                            .foregroundStyle(viewModel.stories.isEmpty ? .white : .text07)
                             .padding(.vertical, 10)
                             .padding(.horizontal, 12)
                     }
+                    .disabled(viewModel.stories.isEmpty)
                     .accessibilityLabel("랜덤 사연 읽기")
-                    .accessibilityHint("무작위로 사연 하나가 열려요.")
+                    .accessibilityHint(viewModel.stories.isEmpty ? "사연이 없어서 비활성화되어 있어요." : "무작위로 사연 하나가 열려요.")
                     .accessibilityAddTraits(.isButton)
-                    .background(Color.PointMint)
+                    .background(viewModel.stories.isEmpty ? Color.gray500 : Color.PointMint)
                     .cornerRadius(50)
                 }
                 .padding(.bottom, 24)
