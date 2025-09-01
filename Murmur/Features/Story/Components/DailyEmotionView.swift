@@ -45,12 +45,7 @@ struct EmotionCard: View {
                 .font(.PretendardBodyBold)
                 .foregroundColor(.Text01)
                 .multilineTextAlignment(.center)
-
-//            Text("\(Int(emotion.confidence * 100))%")
-//                .font(.PretendardSubheadline)
-//                .foregroundColor(.Text04)
         }
-        .frame(maxWidth: .infinity)
         .padding(.vertical, 12)
         .padding(.horizontal, 16)
         .background(Color.Gray100)

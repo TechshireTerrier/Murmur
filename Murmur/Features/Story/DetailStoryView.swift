@@ -36,9 +36,16 @@ struct DetailStoryView: View {
                     }
                 )
             }
-            .frame(maxWidth: .infinity)
         }
+        .scrollIndicators(.hidden)
+        .ignoresSafeArea(edges: .horizontal)
         .navigationBarBackButtonHidden()
+        .enableSwipeBack()
+        .toolbar {
+            CustomBackButton {
+                navigationManager.pop()
+            }
+        }
         .onAppear {
             updateSongWithStoryOrRecommendedTrack()
         }
@@ -74,4 +81,3 @@ struct DetailStoryView: View {
     DetailStoryView(story: MockData.sampleStory)
         .environmentObject(MusicRecommendationViewModel())
 }
-

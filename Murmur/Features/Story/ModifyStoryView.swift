@@ -34,7 +34,7 @@ struct ModifyStoryView: View {
                     } catch {
                         print("Failed to modify story: \(error)")
                     }
-                    navigationManager.pop()
+                    navigationManager.push(to: .loading(story: story))
                 } label: {
                     Text("수정 완료")
                         .modifier(LongButtonModifier(buttonColor: Color.keyMint))
@@ -53,17 +53,23 @@ struct ModifyStoryView: View {
                 .accessibilityHint("뒤로 가기를 누르면 다시 뒤로 돌아가요")
                 .accessibilityAddTraits(.isButton)
             }
-            .frame(maxWidth: .infinity)
         }
-        .onTapGesture {
-                    hideKeyboard()
-                }
         .navigationBarBackButtonHidden()
-    }
-    
-    private func hideKeyboard() {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        .enableSwipeBack()
+        .toolbar {
+            CustomBackButton {
+                navigationManager.pop()
+            }
         }
+        .scrollIndicators(.hidden)
+        .onTapGesture {
+            hideKeyboard()
+        }
+    }
+
+    private func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
 }
 
 #Preview {
