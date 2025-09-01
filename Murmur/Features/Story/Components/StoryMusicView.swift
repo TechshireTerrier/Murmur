@@ -25,10 +25,10 @@ struct StoryMusicView: View {
                 if musicRecommendationVM.recommendedTrack != nil {
                     HStack {
                         if let artwork = musicRecommendationVM.recommendedTrack?.artwork {
-                            ArtworkImage(artwork, width: 100)
+                            ArtworkImage(artwork, width: 50)
                                 .cornerRadius(10)
                                 .shadow(radius: 5)
-                                .padding(.trailing, 16)
+                                .padding(.trailing, 8)
                         }
 
                         VStack(alignment: .leading) {
@@ -55,7 +55,8 @@ struct StoryMusicView: View {
                             .accessibilityAddTraits(.isStaticText)
                         }
                     }
-                    .frame(width: screenWidth * 0.7, height: screenHeight * 0.15, alignment: .leading)
+                    .padding(.leading, 8)
+                    .padding(.vertical, 8)
 
                     Button {
                         if musicRecommendationVM.isMusicPlaying {
@@ -67,21 +68,25 @@ struct StoryMusicView: View {
                         if musicRecommendationVM.isMusicPlaying {
                             Image(systemName: "stop.circle.fill")
                                 .resizable()
-                                .frame(width: screenWidth * 0.1, height: screenWidth * 0.1)
+                                .scaledToFit()
+                                .frame(width: 50)
                                 .foregroundStyle(Color.text07)
                         } else {
                             Image(systemName: "play.circle.fill")
                                 .resizable()
-                                .frame(width: screenWidth * 0.1, height: screenWidth * 0.1)
+                                .scaledToFit()
+                                .frame(width: 50)
                                 .foregroundStyle(Color.text07)
                         }
                     }
+                    .padding(.trailing, 8)
+                    
                 } else {
                     HStack {
                         Image(systemName: "music.note")
                             .resizable()
                             .scaledToFit()
-                            .frame(height: screenWidth * 0.1)
+                            .frame(height: 50)
                             .foregroundStyle(.mint900)
                             .padding(.trailing, 8)
                         Text("추천곡을 불러오는 중입니다...")
@@ -93,8 +98,9 @@ struct StoryMusicView: View {
 
                         ProgressView()
                             .tint(.mint900)
-                            .frame(height: screenHeight * 0.15)
+                            .frame(height: 50)
                     }
+                    .padding(.vertical, 8)
                 }
             }
             .padding(12)

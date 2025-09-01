@@ -47,6 +47,7 @@ struct SongStoryView: View {
                         .accessibilityAddTraits(.isStaticText)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .scrollIndicators(.hidden)
                 .frame(width: screenWidth * 0.9, height: screenHeight * 0.5, alignment: .top)
                 .background(Color.gray50)
                 .clipShape(RoundedRectangle(cornerRadius: 15))

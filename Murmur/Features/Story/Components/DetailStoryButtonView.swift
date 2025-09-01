@@ -21,7 +21,7 @@ struct DetailStoryButtonView: View {
         .padding(.top, 20)
 
         Button(action: onClose) {
-            Text("닫기")
+            Text("홈으로 돌아가기")
                 .modifier(LongButtonModifier(buttonColor: Color.gray400))
         }
         .accessibilityLabel("닫기")
